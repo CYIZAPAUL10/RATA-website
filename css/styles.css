@@ -169,6 +169,9 @@ h1,p {
   gap:1rem;
   a {
     color:rgb(255, 0, 43);
+    flex-grow: 1;
+    display: grid;
+    align-items: flex-end;
   }
   a:hover {
     color: rgb(183, 23, 49);
