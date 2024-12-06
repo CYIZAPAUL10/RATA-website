@@ -1,0 +1,191 @@
+.slideshow-container {
+    .mySlides {
+        .card.one {
+            animation:card-one 50000ms infinite;
+        }
+        .card.two {
+            animation:card-two 50000ms infinite;
+        }
+        .card.three {
+            animation:card-three 50000ms infinite;
+        }
+        .card.four {
+            animation:card-four 50000ms infinite;
+        }
+        .card.five {
+            animation:card-five 50000ms infinite;
+        }
+    }
+    .circle.one {
+        animation: circle-one 50000ms infinite;
+    }
+    .circle.two {
+        animation: circle-two 50000ms infinite;
+    }
+    .circle.three {
+        animation: circle-three 50000ms infinite;
+    }
+    .circle.four {
+        animation: circle-four 50000ms infinite;
+    }
+    .circle.five {
+        animation: circle-five 50000ms infinite;
+    }
+}
+@keyframes card-one {
+    0%,17% {
+        display: block;
+        transform: translateX(0);
+    }
+    19%,100% {
+        display: none;
+        transform: translateX(-150%);
+    }
+}
+@keyframes card-two {
+    0%,19% {
+        display: none;
+        transform: translateX(150%);
+    }
+    20%,37% {
+        display: block;
+        transform: translateX(0);
+    }
+    39%,100% {
+        display: none;
+        transform: translateX(-150%);
+    }
+}
+@keyframes card-three {
+    0%,39% {
+        display: none;
+        transform: translateX(150%);
+    }
+    40%,57% {
+        display: block;
+        transform: translateX(0);
+    }
+    59%,100% {
+        display: none;
+        transform: translateX(-150%);  
+    }
+}
+@keyframes card-four {
+    0%,59% {
+        display: none;
+        transform: translateX(150%);
+    }
+    60%,77% {
+        display: block;
+        transform: translateX(0);
+    }
+    79%,100% {
+        display: none;
+        transform: translateX(-150%);  
+    }
+}
+@keyframes card-five {
+    0%,79% {
+        display: none;
+        transform: translateX(150%);
+    }
+    80%,97% {
+        display: block;
+        transform: translateX(0);
+    }
+    100% {
+        display: none;
+        transform: translateX(-150%);
+    }
+}
+@keyframes circle-one {
+    0% {
+        background-color: black;
+    }
+    19% {
+        background-color: black;
+    }
+    20% {
+        background-color: rgb(168, 168, 168);
+    }
+    100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+@keyframes circle-two {
+    0% {
+        background-color: rgb(168, 168, 168);
+    }
+    19% {
+        background-color: rgb(168, 168, 168);
+    }
+    20% {
+        background-color: black;
+    }
+    39% {
+        background-color: black;
+    }
+    40% {
+        background-color: rgb(168, 168, 168);
+    }
+    100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+@keyframes circle-three {
+    0% {
+        background-color: rgb(168, 168, 168);
+    }
+    39% {
+        background-color: rgb(168, 168, 168);
+    }
+    40% {
+        background-color: black;
+    }
+    59% {
+        background-color: black;
+    }
+    60% {
+        background-color: rgb(168, 168, 168);
+    }
+    100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+@keyframes circle-four {
+    0% {
+        background-color: rgb(168, 168, 168);
+    }
+    59% {
+        background-color: rgb(168, 168, 168);
+    }
+    60% {
+        background-color: black;
+    }
+    79% {
+        background-color: black;
+    }
+    80% {
+        background-color: rgb(168, 168, 168);
+    }
+    100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+@keyframes circle-five {
+    0% {
+        background-color: rgb(168, 168, 168);
+    }
+    79% {
+        background-color: rgb(168, 168, 168);
+    }
+    80% {
+        background-color: black;
+    }
+    99% {
+        background-color: black;
+    }
+    100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
