@@ -9,7 +9,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   
+    text-align: center;
+    line-height: 1.9rem; 
 }
 body {
  background-color: var(--fourth-color);
@@ -19,6 +20,9 @@ img {
   width:100%;
   height:100%;
   object-fit: cover;
+}
+a{
+  text-decoration: none;
 }
 .page-header{
     display: none;
@@ -66,7 +70,6 @@ img {
 .nav-menu a{
     padding: 8px 12px;
     margin: 0 10px;
-    text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
     text-align: center;
@@ -77,13 +80,41 @@ img {
     Using of this color variable is not working*/
     color: black; 
 }
-a:hover{
+.nav-menu a:hover{
     background: #0a0a2d;
     color: #d8d8ee; 
 }
  i {
   font-size: 25px;
   display: none !important;
+}
+/*All section titles*/
+.section-title {
+  font-size: 3rem;
+}
+/*Other normal title*/
+.title {
+  font-weight: 600;
+}
+/*All the paragraphs*/
+p {
+  font-size: 1.2rem;
+  color: rgb(82, 82, 82);
+}
+/*All titles and paragraphs*/
+h1,p {
+  padding: 1rem;
+}
+/*All small circles below slides*/
+.small-circles {
+  display: flex;
+  justify-content: space-evenly;
+  .circle {
+    background-color: rgb(168, 168, 168);
+    border-radius: 50%;
+    width:.5rem !important;
+    height:.5rem !important;
+  }
 }
 /*Section Slideshow container*/
 .slideshow-container {
@@ -120,100 +151,110 @@ a:hover{
           border-radius: 1rem;
         }
       }
-      .image-caption {
-        text-align: center;
-      }
     }
   .card:hover {
     box-shadow: 0 1rem 2rem 0 rgba(0,0,0,50%);
     transform: scale(1.02);
   }
-    .small-circles {
+  }
+} 
+/*What We Do Section*/
+.what-we-do {
+  padding:4rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  a {
+    color:rgb(255, 0, 43);
+  }
+  a:hover {
+    color: rgb(183, 23, 49);
+    text-decoration: underline;
+  }
+  /*Card container*/
+  .cards  { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(23rem,1fr));
+    gap:2rem;
+    /*Each single card*/
+    .card {
+      justify-self: center;
+      background-color: var(--primary-color);
+      border-radius:1rem;
+      box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+      width: 23rem;
       display: flex;
-      justify-content: space-evenly;
-      .circle {
-        border:.1rem solid transparent;
-        background-color: rgb(168, 168, 168);
-        border-radius: 50%;
-        width:.5rem;
-        height:.5rem;
+      flex-direction: column;
+      justify-content: space-between;
+      .image-container {
+        width: 100%;
+        height: 15rem;
+        img {
+          border-radius:1rem 1rem 0 0;
+        }
       }
     }
   }
-} 
-
-/* Slideshow container
-.slideshow-container {
-    width: 70%;
-    position: absolute;
-    margin: 1.25rem auto;
-    height: 80vh;
-    background-color: #0a0a2d;
-    border-radius: 0.625rem;
+}
+.about-us {
+  padding:4rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  .title {
+    font-size: 2rem;
+  }
+  article:last-of-type {
+    display: flex;
+    flex-direction: column;
+    gap:2.5rem;
+    .values {
+     display: grid;
+     grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+     gap:2rem;
+      p {
+        background-color: var(--primary-color);
+        box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+        width:15rem;
+        padding: 1rem 2rem;
+        
+      }
+    }
+  }
+}
+/*Our parteners and feedback section*/
+.our-parteners-and-feebdback {
+  margin: 4rem 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  .wall {
     position: relative;
+    z-index: 1;
+    width:7rem;
+    height:25rem; 
+    background-color: white;
   }
-.slideshow-container img {
-    height: 80vh;
-  }*/
-  /* Hide the images by default */
-  /* Next & previous buttons 
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  */
-  /* Position the "next button" to the right 
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  */
-  /* On hover, add a black background color with a little bit see-through 
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  */
-  /*Welcoming Figure Caption text 
-figcaption {
-    color: #f2f2f2;
-    font-size: 3vw;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 2px;
-    width: 100%;
-    text-align: center;
-    background: #00000075;
-  }
-  .active, .dot:hover {
-    background-color: #717171;
-  } */
-  /* Fading animation 
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+  .slide-our-parteners {
+    background-color: black;
+    flex-grow: 1;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    .image-container {
+      width:20rem;
+      img {
+        border-radius: 1rem;
+      }
+    }
+    .small-circles {
+      width:30%;
+    }
   }
   
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-  /* Add some padding inside the card container 
-  .what-card-container {
-     padding: 2px 16px;
-  }
-
-*/
-
+}
 
 
 

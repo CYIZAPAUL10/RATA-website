@@ -1,37 +1,34 @@
-.slideshow-container {
-    .mySlides {
-        .card.one {
+        .card.one.mySlides {
             animation:card-one 50000ms infinite;
         }
-        .card.two {
+        .card.two.mySlides {
             animation:card-two 50000ms infinite;
         }
-        .card.three {
+        .card.three.mySlides {
             animation:card-three 50000ms infinite;
         }
-        .card.four {
+        .card.four.mySlides {
             animation:card-four 50000ms infinite;
         }
-        .card.five {
+        .card.five.mySlides {
             animation:card-five 50000ms infinite;
         }
+    .circle.one.intro {
+        animation: circle-one-intro 50000ms infinite;
     }
-    .circle.one {
-        animation: circle-one 50000ms infinite;
+    .circle.two.intro {
+        animation: circle-two-intro 50000ms infinite;
     }
-    .circle.two {
-        animation: circle-two 50000ms infinite;
+    .circle.three.intro {
+        animation: circle-three-intro 50000ms infinite;
     }
-    .circle.three {
-        animation: circle-three 50000ms infinite;
+    .circle.four.intro {
+        animation: circle-four-intro 50000ms infinite;
     }
-    .circle.four {
-        animation: circle-four 50000ms infinite;
+    .circle.five.intro {
+        animation: circle-five-intro 50000ms infinite;
     }
-    .circle.five {
-        animation: circle-five 50000ms infinite;
-    }
-}
+
 @keyframes card-one {
     0%,17% {
         display: block;
@@ -98,7 +95,7 @@
         transform: translateX(-150%);
     }
 }
-@keyframes circle-one {
+@keyframes circle-one-intro {
     0%,19% {
         background-color: black;
     }
@@ -106,7 +103,7 @@
         background-color: rgb(168, 168, 168);
     }
 }
-@keyframes circle-two {
+@keyframes circle-two-intro {
     0%,19% {
         background-color: rgb(168, 168, 168);
     }
@@ -117,7 +114,7 @@
         background-color: rgb(168, 168, 168);
     }
 }
-@keyframes circle-three {
+@keyframes circle-three-intro {
     0%,39% {
         background-color: rgb(168, 168, 168);
     }
@@ -128,7 +125,7 @@
         background-color: rgb(168, 168, 168);
     }
 }
-@keyframes circle-four {
+@keyframes circle-four-intro {
     0%,59% {
         background-color: rgb(168, 168, 168);
     }
@@ -139,12 +136,135 @@
         background-color: rgb(168, 168, 168);
     }
 }
-@keyframes circle-five {
+@keyframes circle-five-intro {
     0%,79% {
         background-color: rgb(168, 168, 168);
     }
     80%,99% {
         background-color: black;
+    }
+    100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+.our-parteners-and-feebdback {
+    .slide-our-parteners {
+        .gatagara {
+            animation: gatagara-logo 24000ms infinite;
+        }
+        .giz {
+            animation: giz-logo 24000ms infinite;
+        }
+        .segal {
+            animation: segal-logo 24000ms infinite;
+        }
+        .global {
+            animation: global-logo 24000ms infinite;
+        }
+    }
+    .circle.one.parteners {
+        animation:circle-one-parteners 24000ms infinite;
+    }
+    .circle.two.parteners {
+        animation:circle-two-parteners 24000ms infinite;
+    }
+    .circle.three.parteners {
+        animation:circle-three-parteners 24000ms infinite;
+    }
+    .circle.four.parteners {
+        animation:circle-four-parteners 24000ms infinite;
+    }
+}
+
+@keyframes gatagara-logo {
+    0%,22% {
+        display: block;
+        transform: translateX(0);
+    }
+    24%,100% {
+        display: none;
+        transform: translateX(-210%);
+    }
+}
+@keyframes giz-logo {
+    0%,24% {
+        display: none;
+        transform: translateX(210%);
+    }
+    25%,47% {
+        display: block;
+        transform: translateX(0);
+    }
+    49%,100% {
+        display: none;
+        transform: translateX(-210%);
+    }
+}
+@keyframes segal-logo {
+    0%,49% {
+        display: none;
+        transform: translateX(210%);
+    }
+    50%,72% {
+        display: block;
+        transform: translateX(0);
+    }
+    74%,100% {
+        display: none;
+        transform: translateX(-210%);
+    }
+}
+@keyframes global-logo {
+    0%,74% {
+        display: none;
+        transform: translateX(210%);
+    }
+    75%,98% {
+        display: block;
+        transform: translateX(0);
+    }
+    100% {
+        display: none;
+        transform: translateX(-210%);
+    }
+}
+
+@keyframes circle-one-parteners {
+    0%,24% {
+        background-color: rgb(4, 255, 21);
+    }
+    25%,100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+@keyframes circle-two-parteners {
+    0%,24% {
+        background-color: rgb(168, 168, 168);
+    }
+    25%,49% {
+        background-color: rgb(4, 255, 21);
+    }
+    50%,100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+@keyframes circle-three-parteners {
+    0%,49% {
+        background-color: rgb(168, 168, 168);
+    }
+    50%,74% {
+        background-color: rgb(4, 255, 21);
+    }
+    75%,100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+@keyframes circle-four-parteners{
+    0%,74% {
+        background-color: rgb(168, 168, 168);
+    }
+    75%,98% {
+              background-color: rgb(4, 255, 21);
     }
     100% {
         background-color: rgb(168, 168, 168);
