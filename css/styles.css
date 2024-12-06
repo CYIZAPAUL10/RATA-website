@@ -222,9 +222,11 @@ h1,p {
     }
   }
 }
-/*Our parteners and feedback section*/
-.our-parteners-and-feebdback {
+/*Our parteners section*/
+.our-parteners {
+  background-color: white;
   margin: 4rem 0 0 0;
+  padding: 0 0 2rem 0;
   display: flex;
   justify-content: space-between;
   .wall {
@@ -236,6 +238,7 @@ h1,p {
   }
   .slide-our-parteners {
     background-color: black;
+    border-radius: 1rem;
     flex-grow: 1;
     padding: 1rem 0;
     display: flex;
@@ -247,19 +250,88 @@ h1,p {
       width:20rem;
       img {
         border-radius: 1rem;
+        background: none;
       }
     }
     .small-circles {
       width:30%;
     }
   }
-  
+
+}
+/*feedback section*/
+.feedback {
+  background-color: rgb(1, 15, 37);
+  color: white;
+  padding: 3rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap:3rem;
+  h1 {
+    span {
+      color: rgb(92, 92, 255);
+    }
+  }
+  .comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:3rem;
+    article {
+      background-color: #42424e;
+      padding:2rem 1rem;
+      border-radius: 1rem;
+      box-shadow: 1rem .7rem 1rem #32323b;
+      display: flex;
+      flex-direction: column;
+      gap:2rem;
+      width:70%;
+      .a-person {
+        width:10rem;
+        height:10rem;
+        img {
+          border-radius: 50%;
+        }
+      }
+      q {
+        font-size: 1.3rem;
+      }
+      p {
+        text-align: left;
+        padding: 0;
+        color:white;
+      }
+    }
+  }
 }
 
-
-
-
-
+footer {
+  margin: 4rem 0 0 0;
+  padding:4rem 0;
+  background-color: rgb(1, 15, 37);
+  color:white;
+  display: flex;
+  justify-content: space-evenly;
+  .image-container {
+    width:10rem;
+    height:10rem;
+  }
+  ul {
+    li {
+      list-style: none;
+      a {
+        color:white;
+        i {
+          background-color: #0a0a2d;
+        }
+      }
+      a:hover {
+        color: rgb(92, 92, 255);
+        text-decoration: underline;
+      }
+    }
+  }
+}
 
 
 

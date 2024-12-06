@@ -1,34 +1,37 @@
-        .card.one.mySlides {
-            animation:card-one 50000ms infinite;
-        }
-        .card.two.mySlides {
-            animation:card-two 50000ms infinite;
-        }
-        .card.three.mySlides {
-            animation:card-three 50000ms infinite;
-        }
-        .card.four.mySlides {
-            animation:card-four 50000ms infinite;
-        }
-        .card.five.mySlides {
-            animation:card-five 50000ms infinite;
-        }
-    .circle.one.intro {
-        animation: circle-one-intro 50000ms infinite;
-    }
-    .circle.two.intro {
-        animation: circle-two-intro 50000ms infinite;
-    }
-    .circle.three.intro {
-        animation: circle-three-intro 50000ms infinite;
-    }
-    .circle.four.intro {
-        animation: circle-four-intro 50000ms infinite;
-    }
-    .circle.five.intro {
-        animation: circle-five-intro 50000ms infinite;
-    }
+:root {
+    --parteners-active-background:rgb(92, 92, 255);
+}
 
+.card.one.mySlides {
+    animation:card-one 50000ms infinite;
+}
+.card.two.mySlides {
+    animation:card-two 50000ms infinite;
+}
+.card.three.mySlides {
+    animation:card-three 50000ms infinite;
+}
+.card.four.mySlides {
+    animation:card-four 50000ms infinite;
+}
+.card.five.mySlides {
+    animation:card-five 50000ms infinite;
+}
+.circle.one.intro {
+    animation: circle-one-intro 50000ms infinite;
+}
+.circle.two.intro {
+    animation: circle-two-intro 50000ms infinite;
+}
+.circle.three.intro {
+    animation: circle-three-intro 50000ms infinite;
+}
+.circle.four.intro {
+    animation: circle-four-intro 50000ms infinite;
+}
+.circle.five.intro {
+    animation: circle-five-intro 50000ms infinite;
+}
 @keyframes card-one {
     0%,17% {
         display: block;
@@ -147,7 +150,7 @@
         background-color: rgb(168, 168, 168);
     }
 }
-.our-parteners-and-feebdback {
+.our-parteners {
     .slide-our-parteners {
         .gatagara {
             animation: gatagara-logo 24000ms infinite;
@@ -228,10 +231,9 @@
         transform: translateX(-210%);
     }
 }
-
 @keyframes circle-one-parteners {
     0%,24% {
-        background-color: rgb(4, 255, 21);
+        background-color: var(--parteners-active-background);
     }
     25%,100% {
         background-color: rgb(168, 168, 168);
@@ -242,7 +244,7 @@
         background-color: rgb(168, 168, 168);
     }
     25%,49% {
-        background-color: rgb(4, 255, 21);
+        background-color: var(--parteners-active-background);
     }
     50%,100% {
         background-color: rgb(168, 168, 168);
@@ -253,7 +255,7 @@
         background-color: rgb(168, 168, 168);
     }
     50%,74% {
-        background-color: rgb(4, 255, 21);
+        background-color: var(--parteners-active-background);
     }
     75%,100% {
         background-color: rgb(168, 168, 168);
@@ -264,7 +266,7 @@
         background-color: rgb(168, 168, 168);
     }
     75%,98% {
-              background-color: rgb(4, 255, 21);
+        background-color: var(--parteners-active-background);
     }
     100% {
         background-color: rgb(168, 168, 168);
