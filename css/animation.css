@@ -99,90 +99,51 @@
     }
 }
 @keyframes circle-one {
-    0% {
+    0%,19% {
         background-color: black;
     }
-    19% {
-        background-color: black;
-    }
-    20% {
-        background-color: rgb(168, 168, 168);
-    }
-    100% {
+    20%,100% {
         background-color: rgb(168, 168, 168);
     }
 }
 @keyframes circle-two {
-    0% {
+    0%,19% {
         background-color: rgb(168, 168, 168);
     }
-    19% {
-        background-color: rgb(168, 168, 168);
-    }
-    20% {
+    20%,39% {
         background-color: black;
     }
-    39% {
-        background-color: black;
-    }
-    40% {
-        background-color: rgb(168, 168, 168);
-    }
-    100% {
+    40%,100% {
         background-color: rgb(168, 168, 168);
     }
 }
 @keyframes circle-three {
-    0% {
+    0%,39% {
         background-color: rgb(168, 168, 168);
     }
-    39% {
-        background-color: rgb(168, 168, 168);
-    }
-    40% {
+    40%,59% {
         background-color: black;
     }
-    59% {
-        background-color: black;
-    }
-    60% {
-        background-color: rgb(168, 168, 168);
-    }
-    100% {
+    60%,100% {
         background-color: rgb(168, 168, 168);
     }
 }
 @keyframes circle-four {
-    0% {
+    0%,59% {
         background-color: rgb(168, 168, 168);
     }
-    59% {
-        background-color: rgb(168, 168, 168);
-    }
-    60% {
+    60%,79% {
         background-color: black;
     }
-    79% {
-        background-color: black;
-    }
-    80% {
-        background-color: rgb(168, 168, 168);
-    }
-    100% {
+    80%,100% {
         background-color: rgb(168, 168, 168);
     }
 }
 @keyframes circle-five {
-    0% {
+    0%,79% {
         background-color: rgb(168, 168, 168);
     }
-    79% {
-        background-color: rgb(168, 168, 168);
-    }
-    80% {
-        background-color: black;
-    }
-    99% {
+    80%,99% {
         background-color: black;
     }
     100% {
