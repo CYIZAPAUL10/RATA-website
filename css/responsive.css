@@ -16,11 +16,12 @@
 @media (width<1024px) {
     .slideshow-container {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         justify-content: center;
         .wall {
             display: none;
+        }
+        .mySlides {
+            width:;
         }
     }
     .our-parteners {
