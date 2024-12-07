@@ -1,5 +1,5 @@
 html {
-  scroll-behavior:smooth;
+
 }
 :root{
     --primary-color: #ffff;
@@ -14,6 +14,7 @@ html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     line-height: 1.9rem; 
+    scroll-behavior:smooth;
 }
 body {
  background-color: var(--fourth-color);
@@ -305,6 +306,16 @@ h1,p {
         text-align: left;
         padding: 0;
         color:white;
+      }
+      a {
+        color:rgb(255, 0, 43);
+        flex-grow: 1;
+        display: grid;
+        align-items: flex-end;
+      }
+      a:hover {
+        color: rgb(183, 23, 49);
+        text-decoration: underline;
       }
     }
   }
