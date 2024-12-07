@@ -18,7 +18,8 @@ html {
 }
 body {
  background-color: var(--fourth-color);
- overflow-x: hidden;
+ overflow-x: hidden !important;
+ overflow-y: auto;
 }
 img {
   width:100%;
@@ -500,26 +501,6 @@ footer {
     color:white;
   }
 }
-  @media (max-width: 800px) {
-  .hamburger{
-    display: block;
-  }
-  .nav-menu{
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    min-width: 100%;
-    height: max-content;
-    padding:.5rem 0;
-    background: tomato;
-    transition: 0.3s;
-  }
-   .nav-menu.active{
-    left: 0; 
-   }
-  }
 
 
 
