@@ -38,6 +38,7 @@ a{
 }
 .header nav {
     width: 100%;
+    height:4.5rem;
     background:  var( --primary-color);
     padding: 1rem 1rem 1rem 3rem;
     display: flex;
@@ -71,10 +72,8 @@ a{
 .nav-menu a{
     padding: 8px 12px; 
     font-weight: 500;
-  
     transition:background 0.9s,color 0.9s; 
     border-radius: 30px;
- 
     /*background: transparent; 
     color: var(--second-color); 
     This color variable is not working*/
@@ -139,7 +138,7 @@ h1,p {
       background-color: var(--primary-color);
       box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
       transition: box-shadow 300ms,transform 300ms;
-      width:30rem;
+      width:100%;
       padding:1rem;
       border-radius: 1rem;
       display: flex;
@@ -278,11 +277,6 @@ h1,p {
   display: flex;
   flex-direction: column;
   gap:3rem;
-  h1 {
-    span {
-      color: rgb(92, 92, 255);
-    }
-  }
   .comments {
     display: flex;
     flex-direction: column;
@@ -325,9 +319,12 @@ h1,p {
     }
   }
 }
+.blue-span {
+  color: rgb(92, 92, 255);
+}
 /*Back To Top Button All pages*/
 .Back-Top-Button {
-  margin:2rem 0;
+  margin:1rem 0;
   a {
     padding: .5rem 2rem;
     border-radius: 5rem;
@@ -338,10 +335,6 @@ h1,p {
     background-color: rgb(42, 42, 119);
   }
 }
-.Back-Top-Button.other {
-  margin:.5rem 0;
-}
-
 footer {
   padding:4rem 0;
   background-color: rgb(1, 15, 37);
@@ -451,15 +444,14 @@ footer {
   }
   }
 }
+/*Publish page*/
 .publish-page {
   background-color: rgba(255, 255, 255, 0.582);
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
   .publish-report {
     display: flex;
     flex-direction: column;
-    gap:2.3rem;
+    gap:2.5rem;
     h1,p,a {
       text-align: start;
       padding: 0;
@@ -473,10 +465,42 @@ footer {
     }
   }
 }
-
-
-
-  @media screen and (max-width: 800px) {
+/*Our Team page*/
+.our-team {
+  background-color: rgb(1, 15, 37);
+  color: white;
+  padding: 1rem;
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,1fr));
+    gap:2rem;
+    figure {
+      justify-self: center;
+      width:20rem;
+      background-color: #42424e;
+      padding:1rem;
+      border-radius: 1rem;
+      box-shadow: 1rem .7rem 1rem #32323b;
+      display: flex;
+      flex-direction: column;
+      gap:.5rem;
+      transition: transform 500ms;
+      div {
+        height:25rem;
+        img {
+          border-radius: 1rem;
+        }
+      }
+    }
+    figure:hover {
+      transform: scale(1.1);
+    }
+  }
+  p {
+    color:white;
+  }
+}
+  @media (max-width: 800px) {
   .hamburger{
     display: block;
   }
@@ -486,15 +510,12 @@ footer {
     top: 70px;
     gap: 0;
     flex-direction: column;
-    width: 100%;
-    height: 40vh;
-    padding: 20px 0;
+    min-width: 100%;
+    height: max-content;
+    padding:.5rem 0;
     background: tomato;
     transition: 0.3s;
   }
-   .nav-menu a{
-    margin: 16px 0;
-   }
    .nav-menu.active{
     left: 0; 
    }
