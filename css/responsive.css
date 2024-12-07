@@ -33,24 +33,24 @@
         } 
     }
 }
-@media (width<800px) {
+@media (max-width: 900px) {
     .hamburger{
-        display: block;
+        display: block !important;
     }
     .nav-menu{
         position: fixed;
         left: -100%;
         top: 70px;
-        gap: 0;
+        display: flex;
         flex-direction: column;
-        min-width: 100%;
+        gap:1rem;
+        width: 100%;
         height: max-content;
-        padding:.5rem 0;
-        background: tomato;
-        transition: 0.3s;
+        padding:1rem 0;
+        background: tomato;    
     }
-        .nav-menu.active{
-        left: 0; 
+    .nav-menu.active{
+    left: 0; 
     }
 }
 @media (width>=768px) and (width<1024px) {
