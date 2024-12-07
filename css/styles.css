@@ -1,4 +1,7 @@
-::root{
+html {
+
+}
+:root{
     --primary-color: #ffff;
     --second-color: #0000;
     --third-color: #0a0a2d;
@@ -9,20 +12,38 @@
     padding: 0;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   
+    text-align: center;
+    line-height: 1.9rem; 
+    scroll-behavior:smooth;
+}
+body {
+ background-color: var(--fourth-color);
+ overflow-x: hidden;
+}
+img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+a{
+  text-decoration: none;
 }
 .page-header{
     display: none;
 }
-nav{
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.header nav {
     width: 100%;
-    background: ;
-    padding: 10px 50px;
+    background:  var( --primary-color);
+    padding: 1rem 1rem 1rem 3rem;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     box-shadow: #0a0a2d 1px 1px 5px 1px;
-    position: relative;
 }
 .logo{
     height: 98%;
@@ -30,14 +51,11 @@ nav{
 }
 .logo img{
     width: 70px;
-    height: 100%;
-    align-self: center;
+    align-self:center;
 }
 .header .nav-menu{
     list-style: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 .hamburger{
   display: none;
@@ -51,135 +69,388 @@ nav{
   background: black;
 }
 .nav-menu a{
-    padding: 8px 12px;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 1.1rem;
+    padding: 8px 12px; 
     font-weight: 500;
-    text-align: center;
-    transition: 0.9s;
+  
+    transition:background 0.9s,color 0.9s; 
     border-radius: 30px;
-    background: transparent;
-    color: var(--second-color);
+ 
+    /*background: transparent; 
+    color: var(--second-color); 
+    This color variable is not working*/
+     color: black; 
 }
-a:hover{
+.nav-menu a:hover{
     background: #0a0a2d;
-    color: #d8d8ee;
-    
+    color: #d8d8ee; 
 }
- i{
+ i {
   font-size: 25px;
-    display: none !important;
+  display: none !important;
 }
-/* Slideshow container */
+/*All section titles*/
+.section-title {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+/*Other normal title*/
+.title {
+  font-weight: 600;
+}
+/*All the paragraphs*/
+p {
+  font-size: 1.2rem;
+  color: rgb(82, 82, 82);
+}
+/*All titles and paragraphs*/
+h1,p {
+  padding: 1rem;
+}
+/*All small circles below slides*/
+.small-circles {
+  display: flex;
+  justify-content: space-evenly;
+  .circle {
+    background-color: rgb(168, 168, 168);
+    border-radius: 50%;
+    width:.5rem !important;
+    height:.5rem !important;
+  }
+}
+/*Section Slideshow container*/
 .slideshow-container {
-    width: 70%;
-    position: absolute;
-    margin: 20px auto;
-    height: 80vh;
-    background-color: #0a0a2d;
-    border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*The section walls*/
+  .wall {
     position: relative;
+    z-index: 1;
+    width:10rem;
+    height:25rem;
+    background-color: white;
   }
-.slideshow-container img {
-    height: 80vh;
-  }
-  
-  /* Hide the images by default */
+      /*all of the cards and the small circles (displaying at the bottom), in the div called mySlides*/
   .mySlides {
-    display: none;
-  }
-  
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 3vw;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 2px;
-    width: 100%;
-    text-align: center;
-    background: #00000075;
-  }
-
-  
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-
-  .card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 40%;
-    
-  }
-  
-  .card img{
-    width: 200px;
-    height: 300px;
-    object-fit: contain;
-  }
-  
-  /* On mouse-over, add a deeper shadow */
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    .card  {
+      background-color: var(--primary-color);
+      box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+      transition: box-shadow 300ms,transform 300ms;
+      width:30rem;
+      padding:1rem;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap:1rem;
+      .image-container {
+        width:100%;
+        height:15rem; 
+        img {
+          border-radius: 1rem;
+        }
+      }
+    }
   .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 1rem 2rem 0 rgba(0,0,0,50%);
+    transform: scale(1.02);
   }
-  
-  /* Add some padding inside the card container */
-  .what-card-container {
-    padding: 2px 16px;
+  }
+} 
+/*What We Do Section in the home page*/
+.what-we-do {
+  padding:4rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  a {
+    color:rgb(255, 0, 43);
+    flex-grow: 1;
+    display: grid;
+    align-items: flex-end;
+  }
+  a:hover {
+    color: rgb(183, 23, 49);
+    text-decoration: underline;
+  }
+  /*Card container*/
+  .cards  { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(23rem,1fr));
+    gap:2rem;
+    /*Each single card*/
+    .card {
+      justify-self: center;
+      background-color: var(--primary-color);
+      border-radius:1rem;
+      box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+      width: 23rem;
+      display: flex;
+      flex-direction: column;
+      .image-container {
+        width: 100%;
+        height: 15rem;
+        img {
+          border-radius:1rem 1rem 0 0;
+        }
+      }
+    }
+  }
+}
+/*What we do section in its actual page*/
+.what-we-do.page {
+  background-color: rgba(255, 255, 255, 0.582);
+  padding: 1rem;
+}
+/*About Us (Home Page)*/
+.about-us {
+  padding:4rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  .title {
+    font-size: 2rem;
+  }
+  article:last-of-type {
+    display: flex;
+    flex-direction: column;
+    gap:2.5rem;
+    /*Values*/
+    .values {
+     display: grid;
+     grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+     gap:2rem;
+      p {
+        justify-self: center;
+        background-color: var(--primary-color);
+        box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+        width:15rem;
+        padding: 1rem 2rem;
+        
+      }
+    }
+  }
+}
+/*Our parteners section (Home Page)*/
+.our-parteners {
+  background-color: white;
+  margin: 4rem 0 0 0;
+  padding: 0 0 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  .wall {
+    position: relative;
+    z-index: 1;
+    width:7rem;
+    height:25rem; 
+    background-color: white;
+  }
+  .slide-our-parteners {
+    background-color: black;
+    border-radius: 1rem;
+    flex-grow: 1;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    .image-container {
+      width:20rem;
+      img {
+        border-radius: 1rem;
+        background: none;
+      }
+    }
+    .small-circles {
+      width:30%;
+    }
   }
 
+}
+/*feedback section (Home Page and Feedback Page)*/
+.feedback {
+  background-color: rgb(1, 15, 37);
+  color: white;
+  padding: 3rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap:3rem;
+  h1 {
+    span {
+      color: rgb(92, 92, 255);
+    }
+  }
+  .comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:3rem;
+    article {
+      background-color: #42424e;
+      padding:2rem 1rem;
+      border-radius: 1rem;
+      box-shadow: 1rem .7rem 1rem #32323b;
+      display: flex;
+      flex-direction: column;
+      gap:2rem;
+      width:70%;
+      .a-person {
+        width:10rem;
+        height:10rem;
+        img {
+          border-radius: 50%;
+        }
+      }
+      q {
+        font-size: 1.3rem;
+      }
+      p {
+        text-align: left;
+        padding: 0;
+        color:white;
+      }
+      a {
+        color:rgb(255, 0, 43);
+        flex-grow: 1;
+        display: grid;
+        align-items: flex-end;
+      }
+      a:hover {
+        color: rgb(183, 23, 49);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+/*Back To Top Button All pages*/
+.Back-Top-Button {
+  margin:2rem 0;
+  a {
+    padding: .5rem 2rem;
+    border-radius: 5rem;
+    background-color: #0a0a2d;
+    color: white;
+  }
+  a:hover {
+    background-color: rgb(42, 42, 119);
+  }
+}
+.Back-Top-Button.other {
+  margin:.5rem 0;
+}
 
-
-
-
-
-
-
-
-
-
-
+footer {
+  padding:4rem 0;
+  background-color: rgb(1, 15, 37);
+  color:white;
+  display: flex;
+  justify-content: space-evenly;
+  .image-container {
+    width:10rem;
+    height:10rem;
+  }
+  ul {
+    li {
+      list-style: none;
+      a {
+        color:white;
+        i {
+          background-color: #0a0a2d;
+        }
+      }
+      a:hover {
+        color: rgb(92, 92, 255);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+/*Assistive Technologies Page*/
+.assistivetechnologies-section {
+  background-color: rgba(255, 255, 255, 0.582);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  .assistive-techonologies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(22rem,1fr));
+    gap:1rem;
+    /*figure is both keyboard and touch screen head dauber card*/
+    figure {
+      background-color: var(--primary-color);
+      border-radius:1rem;
+      box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+      img {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+    }
+  }
+  .famous-people-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap:1rem;
+    figure {
+      background-color: var(--primary-color);
+      border-radius:1rem;
+      box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+      img {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        height:25rem;
+      }
+    }
+  }
+}
+/*RATA Courses page*/
+.RATA-Courses {
+  background-color: rgba(255, 255, 255, 0.582);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  .all-courses {
+    margin: 2rem 0 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 1rem;
+    .single-course {
+      background-color: var(--primary-color);
+      border-radius:1rem;
+      box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+    }
+  }
+  .courses-roadmap {
+    margin: 0 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    article {
+      display: flex;
+      flex-direction: column;
+      gap:1rem;
+      ol {
+        list-style-position: inside;
+      }
+      li {
+        text-align: start;
+        font-size: 1.15rem;
+        color: #42424e;
+        line-height: 2.5rem;
+      }
+      h1,p {
+        text-align: start;
+        padding: 0;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+  }
+  }
+}
 
 
 

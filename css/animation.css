@@ -1,0 +1,274 @@
+:root {
+    --parteners-active-background:rgb(92, 92, 255);
+}
+
+.card.one.mySlides {
+    animation:card-one 50000ms infinite;
+}
+.card.two.mySlides {
+    animation:card-two 50000ms infinite;
+}
+.card.three.mySlides {
+    animation:card-three 50000ms infinite;
+}
+.card.four.mySlides {
+    animation:card-four 50000ms infinite;
+}
+.card.five.mySlides {
+    animation:card-five 50000ms infinite;
+}
+.circle.one.intro {
+    animation: circle-one-intro 50000ms infinite;
+}
+.circle.two.intro {
+    animation: circle-two-intro 50000ms infinite;
+}
+.circle.three.intro {
+    animation: circle-three-intro 50000ms infinite;
+}
+.circle.four.intro {
+    animation: circle-four-intro 50000ms infinite;
+}
+.circle.five.intro {
+    animation: circle-five-intro 50000ms infinite;
+}
+@keyframes card-one {
+    0%,17% {
+        display: block;
+        transform: translateX(0);
+    }
+    19%,100% {
+        display: none;
+        transform: translateX(-150%);
+    }
+}
+@keyframes card-two {
+    0%,19% {
+        display: none;
+        transform: translateX(150%);
+    }
+    20%,37% {
+        display: block;
+        transform: translateX(0);
+    }
+    39%,100% {
+        display: none;
+        transform: translateX(-150%);
+    }
+}
+@keyframes card-three {
+    0%,39% {
+        display: none;
+        transform: translateX(150%);
+    }
+    40%,57% {
+        display: block;
+        transform: translateX(0);
+    }
+    59%,100% {
+        display: none;
+        transform: translateX(-150%);  
+    }
+}
+@keyframes card-four {
+    0%,59% {
+        display: none;
+        transform: translateX(150%);
+    }
+    60%,77% {
+        display: block;
+        transform: translateX(0);
+    }
+    79%,100% {
+        display: none;
+        transform: translateX(-150%);  
+    }
+}
+@keyframes card-five {
+    0%,79% {
+        display: none;
+        transform: translateX(150%);
+    }
+    80%,97% {
+        display: block;
+        transform: translateX(0);
+    }
+    100% {
+        display: none;
+        transform: translateX(-150%);
+    }
+}
+@keyframes circle-one-intro {
+    0%,19% {
+        background-color: black;
+    }
+    20%,100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+@keyframes circle-two-intro {
+    0%,19% {
+        background-color: rgb(168, 168, 168);
+    }
+    20%,39% {
+        background-color: black;
+    }
+    40%,100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+@keyframes circle-three-intro {
+    0%,39% {
+        background-color: rgb(168, 168, 168);
+    }
+    40%,59% {
+        background-color: black;
+    }
+    60%,100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+@keyframes circle-four-intro {
+    0%,59% {
+        background-color: rgb(168, 168, 168);
+    }
+    60%,79% {
+        background-color: black;
+    }
+    80%,100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+@keyframes circle-five-intro {
+    0%,79% {
+        background-color: rgb(168, 168, 168);
+    }
+    80%,99% {
+        background-color: black;
+    }
+    100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+.our-parteners {
+    .slide-our-parteners {
+        .gatagara {
+            animation: gatagara-logo 24000ms infinite;
+        }
+        .giz {
+            animation: giz-logo 24000ms infinite;
+        }
+        .segal {
+            animation: segal-logo 24000ms infinite;
+        }
+        .global {
+            animation: global-logo 24000ms infinite;
+        }
+    }
+    .circle.one.parteners {
+        animation:circle-one-parteners 24000ms infinite;
+    }
+    .circle.two.parteners {
+        animation:circle-two-parteners 24000ms infinite;
+    }
+    .circle.three.parteners {
+        animation:circle-three-parteners 24000ms infinite;
+    }
+    .circle.four.parteners {
+        animation:circle-four-parteners 24000ms infinite;
+    }
+}
+
+@keyframes gatagara-logo {
+    0%,22% {
+        display: block;
+        transform: translateX(0);
+    }
+    24%,100% {
+        display: none;
+        transform: translateX(-210%);
+    }
+}
+@keyframes giz-logo {
+    0%,24% {
+        display: none;
+        transform: translateX(210%);
+    }
+    25%,47% {
+        display: block;
+        transform: translateX(0);
+    }
+    49%,100% {
+        display: none;
+        transform: translateX(-210%);
+    }
+}
+@keyframes segal-logo {
+    0%,49% {
+        display: none;
+        transform: translateX(210%);
+    }
+    50%,72% {
+        display: block;
+        transform: translateX(0);
+    }
+    74%,100% {
+        display: none;
+        transform: translateX(-210%);
+    }
+}
+@keyframes global-logo {
+    0%,74% {
+        display: none;
+        transform: translateX(210%);
+    }
+    75%,98% {
+        display: block;
+        transform: translateX(0);
+    }
+    100% {
+        display: none;
+        transform: translateX(-210%);
+    }
+}
+@keyframes circle-one-parteners {
+    0%,24% {
+        background-color: var(--parteners-active-background);
+    }
+    25%,100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+@keyframes circle-two-parteners {
+    0%,24% {
+        background-color: rgb(168, 168, 168);
+    }
+    25%,49% {
+        background-color: var(--parteners-active-background);
+    }
+    50%,100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+@keyframes circle-three-parteners {
+    0%,49% {
+        background-color: rgb(168, 168, 168);
+    }
+    50%,74% {
+        background-color: var(--parteners-active-background);
+    }
+    75%,100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
+@keyframes circle-four-parteners{
+    0%,74% {
+        background-color: rgb(168, 168, 168);
+    }
+    75%,98% {
+        background-color: var(--parteners-active-background);
+    }
+    100% {
+        background-color: rgb(168, 168, 168);
+    }
+}
