@@ -39,12 +39,11 @@ a{
 .header nav {
     width: 100%;
     background:  var( --primary-color);
-    padding: 10px 50px;
+    padding: 1rem 1rem 1rem 3rem;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     box-shadow: #0a0a2d 1px 1px 5px 1px;
-    position: relative;
 }
 .logo{
     height: 98%;
@@ -52,13 +51,11 @@ a{
 }
 .logo img{
     width: 70px;
-    align-self: center;
+    align-self:center;
 }
 .header .nav-menu{
     list-style: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 .hamburger{
   display: none;
@@ -72,17 +69,16 @@ a{
   background: black;
 }
 .nav-menu a{
-    padding: 8px 12px;
-    margin: 0 10px;
-    font-size: 1.1rem;
+    padding: 8px 12px; 
     font-weight: 500;
-    text-align: center;
-    transition: 0.9s;
+  
+    transition:background 0.9s,color 0.9s; 
     border-radius: 30px;
+ 
     /*background: transparent; 
     color: var(--second-color); 
     This color variable is not working*/
-    color: black; 
+     color: black; 
 }
 .nav-menu a:hover{
     background: #0a0a2d;
@@ -95,6 +91,7 @@ a{
 /*All section titles*/
 .section-title {
   font-size: 3rem;
+  line-height: 3rem;
 }
 /*Other normal title*/
 .title {
@@ -162,7 +159,7 @@ h1,p {
   }
   }
 } 
-/*What We Do Section*/
+/*What We Do Section in the home page*/
 .what-we-do {
   padding:4rem 2rem 0 2rem;
   display: flex;
@@ -202,6 +199,12 @@ h1,p {
     }
   }
 }
+/*What we do section in its actual page*/
+.what-we-do.page {
+  background-color: rgba(255, 255, 255, 0.582);
+  padding: 1rem;
+}
+/*About Us (Home Page)*/
 .about-us {
   padding:4rem 2rem 0 2rem;
   display: flex;
@@ -214,11 +217,13 @@ h1,p {
     display: flex;
     flex-direction: column;
     gap:2.5rem;
+    /*Values*/
     .values {
      display: grid;
      grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
      gap:2rem;
       p {
+        justify-self: center;
         background-color: var(--primary-color);
         box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
         width:15rem;
@@ -228,7 +233,7 @@ h1,p {
     }
   }
 }
-/*Our parteners section*/
+/*Our parteners section (Home Page)*/
 .our-parteners {
   background-color: white;
   margin: 4rem 0 0 0;
@@ -265,7 +270,7 @@ h1,p {
   }
 
 }
-/*feedback section*/
+/*feedback section (Home Page and Feedback Page)*/
 .feedback {
   background-color: rgb(1, 15, 37);
   color: white;
@@ -320,7 +325,8 @@ h1,p {
     }
   }
 }
-.Top_Button {
+/*Back To Top Button All pages*/
+.Back-Top-Button {
   margin:2rem 0;
   a {
     padding: .5rem 2rem;
@@ -332,6 +338,10 @@ h1,p {
     background-color: rgb(42, 42, 119);
   }
 }
+.Back-Top-Button.other {
+  margin:.5rem 0;
+}
+
 footer {
   padding:4rem 0;
   background-color: rgb(1, 15, 37);
@@ -358,10 +368,89 @@ footer {
     }
   }
 }
-
-
-
-
+/*Assistive Technologies Page*/
+.assistivetechnologies-section {
+  background-color: rgba(255, 255, 255, 0.582);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  .assistive-techonologies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(22rem,1fr));
+    gap:1rem;
+    /*figure is both keyboard and touch screen head dauber card*/
+    figure {
+      background-color: var(--primary-color);
+      border-radius:1rem;
+      box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+      img {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+    }
+  }
+  .famous-people-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap:1rem;
+    figure {
+      background-color: var(--primary-color);
+      border-radius:1rem;
+      box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+      img {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        height:25rem;
+      }
+    }
+  }
+}
+/*RATA Courses page*/
+.RATA-Courses {
+  background-color: rgba(255, 255, 255, 0.582);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  .all-courses {
+    margin: 2rem 0 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 1rem;
+    .single-course {
+      background-color: var(--primary-color);
+      border-radius:1rem;
+      box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+    }
+  }
+  .courses-roadmap {
+    margin: 0 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    article {
+      display: flex;
+      flex-direction: column;
+      gap:1rem;
+      ol {
+        list-style-position: inside;
+      }
+      li {
+        text-align: start;
+        font-size: 1.15rem;
+        color: #42424e;
+        line-height: 2.5rem;
+      }
+      h1,p {
+        text-align: start;
+        padding: 0;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+  }
+  }
+}
 
 
 
