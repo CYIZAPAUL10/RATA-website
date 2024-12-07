@@ -1,5 +1,5 @@
-html {
-
+html,body {
+  overflow-x: hidden !important;
 }
 :root{
     --primary-color: #ffff;
@@ -18,8 +18,6 @@ html {
 }
 body {
  background-color: var(--fourth-color);
- overflow-x: hidden !important;
- overflow-y: auto;
 }
 img {
   width:100%;
@@ -237,7 +235,7 @@ h1,p {
 .our-parteners {
   background-color: white;
   margin: 4rem 0 0 0;
-  padding: 0 0 2rem 0;
+  padding: 2rem 0;
   display: flex;
   justify-content: space-between;
   .wall {
