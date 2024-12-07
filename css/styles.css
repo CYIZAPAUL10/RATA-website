@@ -320,9 +320,19 @@ h1,p {
     }
   }
 }
-
+.Top_Button {
+  margin:2rem 0;
+  a {
+    padding: .5rem 2rem;
+    border-radius: 5rem;
+    background-color: #0a0a2d;
+    color: white;
+  }
+  a:hover {
+    background-color: rgb(42, 42, 119);
+  }
+}
 footer {
-  margin: 4rem 0 0 0;
   padding:4rem 0;
   background-color: rgb(1, 15, 37);
   color:white;
