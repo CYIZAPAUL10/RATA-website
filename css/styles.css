@@ -451,8 +451,28 @@ footer {
   }
   }
 }
-
-
+.publish-page {
+  background-color: rgba(255, 255, 255, 0.582);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  .publish-report {
+    display: flex;
+    flex-direction: column;
+    gap:2.3rem;
+    h1,p,a {
+      text-align: start;
+      padding: 0;
+    }
+    a {
+      color:rgb(255, 0, 43);
+    }
+    a:hover {
+      color: rgb(183, 23, 49);
+      text-decoration: underline;
+    }
+  }
+}
 
 
 
