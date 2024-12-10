@@ -20,18 +20,17 @@
         .wall {
             display: none;
         }
-        .mySlides {
-            width:;
-        }
     }
-    .our-parteners {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        justify-content: center;
-        .wall {
-            display: none;
-        } 
+        .our-parteners {
+            .partener-slide {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
+            .wall {
+                display: none;
+            } 
+        }
     }
 }
 @media (max-width: 900px) {
@@ -60,6 +59,11 @@
     }
 }
 @media (width<768px) {
+    .mySlides {
+        .card {
+            width:100% !important;
+        }
+    } 
     footer {
         display: flex;
         flex-direction: column;

@@ -2,101 +2,89 @@
     --parteners-active-background:rgb(92, 92, 255);
 }
 .card.one.mySlides {
-    animation:card-one 50000ms infinite;
+    animation:card-one 30000ms infinite;
 }
 .card.two.mySlides {
-    animation:card-two 50000ms infinite;
+    animation:card-two 30000ms infinite;
 }
 .card.three.mySlides {
-    animation:card-three 50000ms infinite;
+    animation:card-three 30000ms infinite;
 }
 .card.four.mySlides {
-    animation:card-four 50000ms infinite;
+    animation:card-four 30000ms infinite;
 }
 .card.five.mySlides {
-    animation:card-five 50000ms infinite;
+    animation:card-five 30000ms infinite;
 }
 .circle.one.intro {
-    animation: circle-one-intro 50000ms infinite;
+    animation: circle-one-intro 30000ms infinite;
 }
 .circle.two.intro {
-    animation: circle-two-intro 50000ms infinite;
+    animation: circle-two-intro 30000ms infinite;
 }
 .circle.three.intro {
-    animation: circle-three-intro 50000ms infinite;
+    animation: circle-three-intro 30000ms infinite;
 }
 .circle.four.intro {
-    animation: circle-four-intro 50000ms infinite;
+    animation: circle-four-intro 30000ms infinite;
 }
 .circle.five.intro {
-    animation: circle-five-intro 50000ms infinite;
+    animation: circle-five-intro 30000ms infinite;
 }
 @keyframes card-one {
     0%,17% {
-        display: block;
-        transform: translateX(0);
+        opacity: 100%;
     }
     19%,100% {
-        display: none;
-        transform: translateX(-200%);
+        opacity: 0;
     }
 }
 @keyframes card-two {
     0%,19% {
-        display: none;
-        transform: translateX(200%);
+        opacity:0;
     }
     20%,37% {
-        display: block;
-        transform: translateX(0);
+        opacity: 100%;
     }
     39%,100% {
-        display: none;
-        transform: translateX(-200%);
+        opacity:0;
     }
 }
 @keyframes card-three {
     0%,39% {
-        display: none;
-        transform: translateX(200%);
+        opacity: 0;
     }
     40%,57% {
-        display: block;
-        transform: translateX(0);
+        opacity: 100%;
     }
     59%,100% {
-        display: none;
-        transform: translateX(-200%);  
+        opacity: 0;
     }
 }
 @keyframes card-four {
     0%,59% {
-        display: none;
-        transform: translateX(200%);
+        opacity: 0;
     }
     60%,77% {
-        display: block;
-        transform: translateX(0);
+        opacity: 100%;
     }
     79%,100% {
-        display: none;
-        transform: translateX(-200%);  
+        opacity: 0;
     }
 }
 @keyframes card-five {
     0%,79% {
-        display: none;
-        transform: translateX(200%);
+        opacity: 0;
     }
     80%,97% {
-        display: block;
-        transform: translateX(0);
+    opacity: 100%;
     }
     100% {
-        display: none;
-        transform: translateX(-200%);
+        opacity: 0;
     }
 }
+
+
 @keyframes circle-one-intro {
     0%,19% {
         background-color: black;

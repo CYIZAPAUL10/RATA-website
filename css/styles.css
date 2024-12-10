@@ -130,23 +130,25 @@ h1,p {
   }
       /*all of the cards and the small circles (displaying at the bottom), in the div called mySlides*/
   .mySlides {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:2rem;
+    position: relative;
+    width: 100%;
+    height:25rem;
     .card  {
+      position: absolute;
+      top:0;
+      left:50% !important;
+      transform: translateX(-50%) !important;
       background-color: var(--primary-color);
       box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
       transition: box-shadow 300ms,transform 300ms;
-      padding:1rem;
+      padding:.5rem;
       border-radius: 1rem;
-      width:95%;
-      display: flex;
-      flex-direction: column;
+      width:max-content;
+      height:max-content;
       gap:1rem;
       .image-container {
-        width:100%;
-        height:15rem; 
+        height:15rem;
+        height:20rem;
         img {
           border-radius: 1rem;
         }
@@ -154,8 +156,10 @@ h1,p {
     }
   .card:hover {
     box-shadow: 0 1rem 2rem 0 rgba(0,0,0,50%);
-  }
+  } 
   .small-circles {
+    position: absolute;
+    bottom:0;
     width: 100%;
   }
   }
@@ -238,38 +242,39 @@ h1,p {
 .our-parteners {
   background-color: white;
   margin: 4rem 0 0 0;
-  padding: 2rem 0;
-  display: flex;
-  justify-content: space-between;
-  .wall {
-    position: relative;
-    z-index: 1;
-    width:7rem;
-    height:25rem; 
-    background-color: white;
-  }
-  .slide-our-parteners {
-    background-color: black;
-    border-radius: 1rem;
-    flex-grow: 1;
-    padding: 1rem 0;
+  padding: 0 0 2rem 0;
+    .partener-slide {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:2rem;
-    .image-container {
-      width:20rem;
-      img {
-        border-radius: 1rem;
-        background: none;
+    justify-content: space-between;
+    .wall {
+      position: relative;
+      z-index: 1;
+      width:7rem;
+      height:25rem; 
+      background-color: white;
+    }
+    .slide-our-parteners {
+      background-color: black;
+      border-radius: 1rem;
+      flex-grow: 1;
+      padding: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap:2rem;
+      .image-container {
+        width:20rem;
+        img {
+          border-radius: 1rem;
+          background: none;
+        }
+      }
+      .small-circles {
+        width:30%;
       }
     }
-    .small-circles {
-      width:30%;
-    }
   }
-
 }
 /*feedback section (Home Page and Feedback Page)*/
 .feedback {
