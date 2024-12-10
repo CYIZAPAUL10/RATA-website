@@ -1,103 +1,90 @@
 :root {
     --parteners-active-background:rgb(92, 92, 255);
 }
-
 .card.one.mySlides {
-    animation:card-one 50000ms infinite;
+    animation:card-one 30000ms infinite;
 }
 .card.two.mySlides {
-    animation:card-two 50000ms infinite;
+    animation:card-two 30000ms infinite;
 }
 .card.three.mySlides {
-    animation:card-three 50000ms infinite;
+    animation:card-three 30000ms infinite;
 }
 .card.four.mySlides {
-    animation:card-four 50000ms infinite;
+    animation:card-four 30000ms infinite;
 }
 .card.five.mySlides {
-    animation:card-five 50000ms infinite;
+    animation:card-five 30000ms infinite;
 }
 .circle.one.intro {
-    animation: circle-one-intro 50000ms infinite;
+    animation: circle-one-intro 30000ms infinite;
 }
 .circle.two.intro {
-    animation: circle-two-intro 50000ms infinite;
+    animation: circle-two-intro 30000ms infinite;
 }
 .circle.three.intro {
-    animation: circle-three-intro 50000ms infinite;
+    animation: circle-three-intro 30000ms infinite;
 }
 .circle.four.intro {
-    animation: circle-four-intro 50000ms infinite;
+    animation: circle-four-intro 30000ms infinite;
 }
 .circle.five.intro {
-    animation: circle-five-intro 50000ms infinite;
+    animation: circle-five-intro 30000ms infinite;
 }
 @keyframes card-one {
     0%,17% {
-        display: block;
-        transform: translateX(0);
+        opacity: 100%;
     }
     19%,100% {
-        display: none;
-        transform: translateX(-150%);
+        opacity: 0;
     }
 }
 @keyframes card-two {
     0%,19% {
-        display: none;
-        transform: translateX(150%);
+        opacity:0;
     }
     20%,37% {
-        display: block;
-        transform: translateX(0);
+        opacity: 100%;
     }
     39%,100% {
-        display: none;
-        transform: translateX(-150%);
+        opacity:0;
     }
 }
 @keyframes card-three {
     0%,39% {
-        display: none;
-        transform: translateX(150%);
+        opacity: 0;
     }
     40%,57% {
-        display: block;
-        transform: translateX(0);
+        opacity: 100%;
     }
     59%,100% {
-        display: none;
-        transform: translateX(-150%);  
+        opacity: 0;
     }
 }
 @keyframes card-four {
     0%,59% {
-        display: none;
-        transform: translateX(150%);
+        opacity: 0;
     }
     60%,77% {
-        display: block;
-        transform: translateX(0);
+        opacity: 100%;
     }
     79%,100% {
-        display: none;
-        transform: translateX(-150%);  
+        opacity: 0;
     }
 }
 @keyframes card-five {
     0%,79% {
-        display: none;
-        transform: translateX(150%);
+        opacity: 0;
     }
     80%,97% {
-        display: block;
-        transform: translateX(0);
+    opacity: 100%;
     }
     100% {
-        display: none;
-        transform: translateX(-150%);
+        opacity: 0;
     }
 }
+
+
 @keyframes circle-one-intro {
     0%,19% {
         background-color: black;
@@ -153,29 +140,29 @@
 .our-parteners {
     .slide-our-parteners {
         .gatagara {
-            animation: gatagara-logo 24000ms infinite;
+            animation: gatagara-logo 30000ms infinite;
         }
         .giz {
-            animation: giz-logo 24000ms infinite;
+            animation: giz-logo 30000ms infinite;
         }
         .segal {
-            animation: segal-logo 24000ms infinite;
+            animation: segal-logo 30000ms infinite;
         }
         .global {
-            animation: global-logo 24000ms infinite;
+            animation: global-logo 30000ms infinite;
         }
     }
     .circle.one.parteners {
-        animation:circle-one-parteners 24000ms infinite;
+        animation:circle-one-parteners 30000ms infinite;
     }
     .circle.two.parteners {
-        animation:circle-two-parteners 24000ms infinite;
+        animation:circle-two-parteners 30000ms infinite;
     }
     .circle.three.parteners {
-        animation:circle-three-parteners 24000ms infinite;
+        animation:circle-three-parteners 30000ms infinite;
     }
     .circle.four.parteners {
-        animation:circle-four-parteners 24000ms infinite;
+        animation:circle-four-parteners 30000ms infinite;
     }
 }
 
@@ -186,13 +173,13 @@
     }
     24%,100% {
         display: none;
-        transform: translateX(-210%);
+        transform: translateX(-260%);
     }
 }
 @keyframes giz-logo {
     0%,24% {
         display: none;
-        transform: translateX(210%);
+        transform: translateX(260%);
     }
     25%,47% {
         display: block;
@@ -200,13 +187,13 @@
     }
     49%,100% {
         display: none;
-        transform: translateX(-210%);
+        transform: translateX(-260%);
     }
 }
 @keyframes segal-logo {
     0%,49% {
         display: none;
-        transform: translateX(210%);
+        transform: translateX(260%);
     }
     50%,72% {
         display: block;
@@ -214,13 +201,13 @@
     }
     74%,100% {
         display: none;
-        transform: translateX(-210%);
+        transform: translateX(-260%);
     }
 }
 @keyframes global-logo {
     0%,74% {
         display: none;
-        transform: translateX(210%);
+        transform: translateX(260%);
     }
     75%,98% {
         display: block;
@@ -228,7 +215,7 @@
     }
     100% {
         display: none;
-        transform: translateX(-210%);
+        transform: translateX(-260%);
     }
 }
 @keyframes circle-one-parteners {
