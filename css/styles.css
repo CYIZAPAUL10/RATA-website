@@ -86,14 +86,15 @@ a{
   font-size: 25px;
   display: none !important;
 }
-/*All section titles*/
+/*All section titles h1*/
 .section-title {
   font-size: 3rem;
   line-height: 4rem;
 }
-/*Other normal title*/
+/*Other normal title h2*/
 .title {
-  font-weight: 600;
+  font-weight: 500;
+  line-height: 2.5rem;
 }
 /*All the paragraphs*/
 p {
@@ -101,7 +102,7 @@ p {
   color: rgb(82, 82, 82);
 }
 /*All titles and paragraphs*/
-h1,p {
+h1,p,h2 {
   padding: 1rem;
 }
 /*All small circles below slides*/
@@ -201,7 +202,7 @@ h1,p {
     }
   }
 }
-/*What we do section in its actual page*/
+/*What we do section in its actual page called "Our Programs"*/
 .what-we-do.page {
   background-color: rgba(255, 255, 255, 0.582);
   padding: 1rem;
@@ -253,7 +254,10 @@ h1,p {
       background-color: white;
     }
     .slide-our-parteners {
+      position: relative;
+      height:25rem;
       background-color: black;
+      color: white;
       border-radius: 1rem;
       flex-grow: 1;
       padding: 1rem 0;
@@ -263,13 +267,20 @@ h1,p {
       align-items: center;
       gap:2rem;
       .image-container {
+        position: absolute;
+        top:0;
+        left:50%;
+        transform: translateX(-50%);
         width:20rem;
+        height:15rem;
         img {
           border-radius: 1rem;
           background: none;
         }
       }
       .small-circles {
+        position: absolute;
+        bottom: 3rem;
         width:30%;
       }
     }

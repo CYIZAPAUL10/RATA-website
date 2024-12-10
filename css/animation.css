@@ -165,59 +165,47 @@
         animation:circle-four-parteners 30000ms infinite;
     }
 }
-
 @keyframes gatagara-logo {
     0%,22% {
-        display: block;
-        transform: translateX(0);
+    opacity: 100%;
     }
     24%,100% {
-        display: none;
-        transform: translateX(-260%);
+    opacity: 0;
     }
 }
 @keyframes giz-logo {
     0%,24% {
-        display: none;
-        transform: translateX(260%);
+    opacity: 0;
     }
     25%,47% {
-        display: block;
-        transform: translateX(0);
+    opacity: 100%;
     }
     49%,100% {
-        display: none;
-        transform: translateX(-260%);
+    opacity: 0;
     }
 }
 @keyframes segal-logo {
     0%,49% {
-        display: none;
-        transform: translateX(260%);
+    opacity: 0;
     }
     50%,72% {
-        display: block;
-        transform: translateX(0);
+    opacity: 100%;
     }
     74%,100% {
-        display: none;
-        transform: translateX(-260%);
+    opacity: 0;
     }
 }
 @keyframes global-logo {
     0%,74% {
-        display: none;
-        transform: translateX(260%);
+    opacity: 0;
     }
     75%,98% {
-        display: block;
-        transform: translateX(0);
+        opacity: 100%;
     }
     100% {
-        display: none;
-        transform: translateX(-260%);
+    opacity: 0;
     }
-}
+} 
 @keyframes circle-one-parteners {
     0%,24% {
         background-color: var(--parteners-active-background);
