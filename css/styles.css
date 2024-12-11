@@ -1,5 +1,5 @@
 html,body {
-  overflow-x: hidden !important;
+  /*overflow-x: hidden !important; */
 }
 :root{
     --primary-color: #ffff;
@@ -15,6 +15,9 @@ html,body {
     text-align: center;
     line-height: 1.9rem; 
     scroll-behavior:smooth;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 body {
  background-color: var(--fourth-color);
@@ -41,7 +44,7 @@ a{
     background:  var( --primary-color);
     padding: 1rem 1rem 1rem 3rem;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-betwee;
     align-items: center;
     box-shadow: #0a0a2d 1px 1px 5px 1px;
 }
@@ -52,10 +55,13 @@ a{
 .logo img{
     width: 70px;
     align-self:center;
+    background:url(img\small-logo-off);
 }
 .header .nav-menu{
     list-style: none;
+    flex-grow: 1;
     display: flex;
+    justify-content: space-evenly;
 }
 .hamburger{
   display: none;
@@ -73,9 +79,6 @@ a{
     font-weight: 500;
     transition:background 0.9s,color 0.9s; 
     border-radius: 30px;
-    /*background: transparent; 
-    color: var(--second-color); 
-    This color variable is not working*/
      color: black; 
 }
 .nav-menu a:hover{
@@ -152,6 +155,21 @@ h1,p,h2 {
           border-radius: 1rem;
         }
       }
+      .train2 {
+        background-image: url(/img/small-train2.png);
+      }
+      .train {
+        background-image:url(/img/small-train.png);
+      }
+      .teachers {
+        background-image:url(/img/small-teachers.png);
+      }
+      .meet {
+        background-image:url(/img/small-meet.png);
+      }
+      .appreciate {
+        background-image:url(/img/small-appreciate.png);
+      }
     }
   .card:hover {
     box-shadow: 0 1rem 2rem 0 rgba(0,0,0,50%);
@@ -199,13 +217,27 @@ h1,p,h2 {
           border-radius:1rem 1rem 0 0;
         }
       }
+      .community {
+        background-image: url(/img/small-Community.png);
+      }
+      .train2 {
+        background-image: url(/img/small-train2.png);
+      }
+      .trainers-one {
+        background-image: url(/img/small-Trainers\ one.png);
+      }
+      .trainers-two {
+        background-image: url(/img/small-Trainers\ two.png);
+      }
+      .computer.screen {
+        background-image: url(/img/small-Computer\ Screen.png);
+      }
     }
   }
 }
 /*What we do section in its actual page called "Our Programs"*/
 .what-we-do.page {
   background-color: rgba(255, 255, 255, 0.582);
-  padding: 1rem;
 }
 /*About Us (At the Home Page)*/
 .about-us {
@@ -277,6 +309,18 @@ h1,p,h2 {
           border-radius: 1rem;
           background: none;
         }
+        .gatagara img {
+          background-image: url(/img/small-hvp_gatagara_orthopedics_and_rehabilitation_hospital_logo.jpeg);
+        }
+        .giz img {
+          background-image: url(/img/small-giz.jpg);
+        }
+        .segal img {
+          background-image: url(/img/small-segal.png);
+        }
+        .global img {
+          background-image: url(/img/small-global.png);
+        }
       }
       .small-circles {
         position: absolute;
@@ -311,9 +355,22 @@ h1,p,h2 {
       .a-person {
         width:10rem;
         height:10rem;
+        border-radius: 50%;
         img {
           border-radius: 50%;
         }
+      }
+      .gerard {
+        background-image: url(/img/small-Gerard.png);
+      }
+      .perlin {
+        background-image: url(/img/small-Perlin.png);
+      }
+      .emmanuel {
+        background-image: url(/img/small-Emmanuel.png);
+      }
+      .aggripine {
+        background-image: url(/img/small-Aggrippine.png);
       }
       q {
         font-size: 1.3rem;
@@ -353,7 +410,7 @@ h1,p,h2 {
   }
 }
 footer {
-  padding:4rem 0;
+  padding:2rem 0;
   background-color: rgb(1, 15, 37);
   color:white;
   display: flex;
@@ -361,6 +418,7 @@ footer {
   .image-container {
     width:10rem;
     height:10rem;
+    background-image: url(/img/small-logo-off.png);
   }
   ul {
     li {
@@ -394,9 +452,19 @@ footer {
       background-color: var(--primary-color);
       border-radius:1rem;
       box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
-      img {
+      div {
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
+        img {
+          border-top-left-radius: 1rem;
+          border-top-right-radius: 1rem;
+        }
+      }
+      .large-print-keyboard {
+        background-image: url(/img/small-print-keller.png);
+      }
+      .touchscreen-head-dauber {
+        background-image: url(/img/small-touchscreen-head-dauber.png);
       }
     }
   }
@@ -408,10 +476,23 @@ footer {
       background-color: var(--primary-color);
       border-radius:1rem;
       box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
-      img {
+      div {
+        height: 25rem;
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
-        height:25rem;
+        img {
+          border-top-left-radius: 1rem;
+          border-top-right-radius: 1rem;
+        }
+      }
+      .stephen {
+        background-image: url(/img/small-stephen-hawking.png);
+      }
+      .stevie {
+        background-image: url(/img/small-stevie-wonder.png);
+      }
+      .helen {
+        background-image: url(/img/small-helen-keller.png);
       }
     }
   }
@@ -489,7 +570,7 @@ footer {
   padding: 1rem;
   .team-members {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(17rem,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(19rem,1fr));
     gap:2rem;
     figure {
       justify-self: center;
@@ -501,27 +582,29 @@ footer {
       display: flex;
       flex-direction: column;
       gap:.5rem;
-      transition: transform 500ms;
       div {
         height:25rem;
+        overflow: hidden;
         img {
           border-radius: 1rem;
+          transition: transform 500ms;
         }
       }
+      .rene {
+        background-image:url(/img/small-Rene.png);
+      }
+      .kayitesi {
+        background-image:url(/img/small-Kayitesi.png);
+      }
+      .birekeraho {
+        background-image:url(/img/small-Birekeraho.png);
+      }
     }
-    figure:hover {
-      transform: scale(1.1);
+    img:hover {
+      transform: scale(1.4);
     }
   }
   p {
     color:white;
   }
 }
-
-
-
-
-
-
-
-

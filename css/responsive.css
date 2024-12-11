@@ -33,9 +33,10 @@
         }
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 1170px) {
     .hamburger{
         display: block !important;
+        margin-left: auto;
     }
     .nav-menu{
         position: fixed;
@@ -84,5 +85,10 @@
 @media (width<320px) {
     html {
         font-size: 10px;
+    }
+}
+@media (height<450px) {
+    .header {
+        position:static;
     }
 }
