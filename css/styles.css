@@ -1,6 +1,3 @@
-html,body {
-  /*overflow-x: hidden !important; */
-}
 :root{
     --primary-color: #ffff;
     --second-color: #0000;
@@ -55,7 +52,7 @@ a{
 .logo img{
     width: 70px;
     align-self:center;
-    background:url(img\small-logo-off);
+    background:url(/img/small-logo-off.png);
 }
 .header .nav-menu{
     list-style: none;
