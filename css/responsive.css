@@ -40,6 +40,7 @@
     }
     .nav-menu{
         position: fixed;
+        z-index: 5;
         left: -100%;
         top: 70px;
         display: flex;
