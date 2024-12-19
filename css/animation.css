@@ -1,35 +1,68 @@
 :root {
     --parteners-active-background:rgb(92, 92, 255);
 }
+
 .card.one.mySlides {
-    animation:card-one 30000ms infinite;
+    animation:card-one 60000ms infinite;
+    .card-one-sentence-one {
+        animation: card-one-sentence-one 60000ms steps(60) infinite,border-right-blink 700ms infinite;
+        border-right: .1rem solid black;
+    }
 }
 .card.two.mySlides {
-    animation:card-two 30000ms infinite;
+    animation:card-two 60000ms infinite;
+    .card-two-sentence-one {        
+        animation: card-two-sentence-one 60000ms steps(60) infinite;
+    }
+    .card-two-sentence-two {
+        animation: card-two-sentence-two 60000ms steps(60) infinite,border-right-blink 700ms infinite;
+        border-right: .1rem solid black;
+    }
 }
 .card.three.mySlides {
-    animation:card-three 30000ms infinite;
+    animation:card-three 60000ms infinite;
+    .card-three-sentence-one {
+        animation: card-three-sentence-one 60000ms steps(60) infinite;
+    }
+    .card-three-sentence-two {
+        animation: card-three-sentence-two 60000ms steps(60) infinite,border-right-blink 700ms infinite;
+        border-right: .1rem solid black;
+    }
 }
 .card.four.mySlides {
-    animation:card-four 30000ms infinite;
+    animation:card-four 60000ms infinite;
+    .card-four-sentence-one {
+        animation: card-four-sentence-one 60000ms steps(60) infinite;
+    }
+    .card-four-sentence-two {
+        animation: card-four-sentence-two 60000ms steps(60) infinite,border-right-blink 700ms infinite;
+        border-right: .1rem solid black;
+    }
 }
 .card.five.mySlides {
-    animation:card-five 30000ms infinite;
+    animation:card-five 60000ms infinite;
+    .card-five-sentence-one {
+        animation: card-five-sentence-one 60000ms steps(60) infinite;
+    }
+    .card-five-sentence-two {
+        animation: card-five-sentence-two 60000ms steps(60) infinite,border-right-blink 700ms infinite;
+        border-right: .1rem solid black;
+    }
 }
 .circle.one.intro {
-    animation: circle-one-intro 30000ms infinite;
+    animation: circle-one-intro 60000ms infinite;
 }
 .circle.two.intro {
-    animation: circle-two-intro 30000ms infinite;
+    animation: circle-two-intro 60000ms infinite;
 }
 .circle.three.intro {
-    animation: circle-three-intro 30000ms infinite;
+    animation: circle-three-intro 60000ms infinite;
 }
 .circle.four.intro {
-    animation: circle-four-intro 30000ms infinite;
+    animation: circle-four-intro 60000ms infinite;
 }
 .circle.five.intro {
-    animation: circle-five-intro 30000ms infinite;
+    animation: circle-five-intro 60000ms infinite;
 }
 @keyframes card-one {
     0%,17% {
@@ -37,6 +70,11 @@
     }
     19%,100% {
         opacity: 0;
+    }
+}
+@keyframes card-one-sentence-one {
+    10%,100% {
+        width: 34ch;
     }
 }
 @keyframes card-two {
@@ -48,6 +86,22 @@
     }
     39%,100% {
         opacity:0;
+    }
+} 
+@keyframes card-two-sentence-one {
+    0%,20% {
+        width: 0ch;
+    }
+    25%,100% {
+        width:39ch;
+    }
+}
+@keyframes card-two-sentence-two {
+    0%,25% {
+        width: 0;
+    }
+    30%,100% {
+        width:30ch;
     }
 }
 @keyframes card-three {
@@ -61,6 +115,22 @@
         opacity: 0;
     }
 }
+@keyframes card-three-sentence-one {
+    0%,39% {
+        width: 0ch;
+    }
+    45%,100% {
+        width: 32ch;
+    }
+}
+@keyframes card-three-sentence-two {
+    0%,45% {
+        width: 0;
+    }
+    50%,100% {
+        width:21ch;
+    }
+}
 @keyframes card-four {
     0%,59% {
         opacity: 0;
@@ -70,6 +140,22 @@
     }
     79%,100% {
         opacity: 0;
+    }
+}
+@keyframes card-four-sentence-one {
+    0%,59% {
+        width: 0;
+    }
+    65%,100% {
+        width: 50ch;
+    }
+}
+@keyframes card-four-sentence-two {
+    0%,65% {
+        width: 0;
+    }
+    70%,100% {
+        width:27ch;
     }
 }
 @keyframes card-five {
@@ -83,8 +169,33 @@
         opacity: 0;
     }
 }
+@keyframes card-five-sentence-one {
+    0%,79% {
+        width: 0ch;
+    }
+    85%,100% {
+        width:38ch;
+    }
+}
+@keyframes card-five-sentence-two {
+    0%,85% {
+        width: 0ch;
+    }
+    90%,100% {
+        width:30ch;
+    }
+}
+@keyframes border-right-blink {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+/*
 
 
+
+}*/
 @keyframes circle-one-intro {
     0%,19% {
         background-color: black;

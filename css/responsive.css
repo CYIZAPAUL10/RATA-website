@@ -64,6 +64,9 @@
     .mySlides {
         .card {
             width:100% !important;
+            .image-container  {
+                width: unset !important;
+            }
         }
     } 
     footer {
