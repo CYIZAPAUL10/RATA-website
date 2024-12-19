@@ -302,7 +302,7 @@ h1,p,h2 {
       background-color: #42424e;
       padding:2rem 1rem;
       border-radius: 1rem;
-      box-shadow: 1rem .7rem 1rem #32323b;
+      box-shadow: 1rem .7rem 1rem black;
       display: flex;
       flex-direction: column;
       gap:2rem;
