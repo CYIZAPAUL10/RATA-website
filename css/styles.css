@@ -147,7 +147,7 @@ h1,p {
       height:max-content;
       gap:1rem;
       .image-container {
-        height:15rem;
+        width: 35rem;
         height:20rem;
         img {
           border-radius: 1rem;
