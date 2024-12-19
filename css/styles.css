@@ -53,7 +53,6 @@ a{
 .logo img{
     width: 70px;
     align-self:center;
-    background:url(/img/small-logo-off.png);
 }
 .header .nav-menu{
     list-style: none;
@@ -153,21 +152,6 @@ h1,p,h2 {
           border-radius: 1rem;
         }
       }
-      .train2 {
-        background-image: url(/img/small-train2.png);
-      }
-      .train {
-        background-image:url(/img/small-train.png);
-      }
-      .teachers {
-        background-image:url(/img/small-teachers.png);
-      }
-      .meet {
-        background-image:url(/img/small-meet.png);
-      }
-      .appreciate {
-        background-image:url(/img/small-appreciate.png);
-      }
     }
   .card:hover {
     box-shadow: 0 1rem 2rem 0 rgba(0,0,0,50%);
@@ -214,21 +198,6 @@ h1,p,h2 {
         img {
           border-radius:1rem 1rem 0 0;
         }
-      }
-      .community {
-        background-image: url(/img/small-Community.png);
-      }
-      .train2 {
-        background-image: url(/img/small-train2.png);
-      }
-      .trainers-one {
-        background-image: url(/img/small-Trainers\ one.png);
-      }
-      .trainers-two {
-        background-image: url(/img/small-Trainers\ two.png);
-      }
-      .computer.screen {
-        background-image: url(/img/small-Computer\ Screen.png);
       }
     }
   }
@@ -307,18 +276,6 @@ h1,p,h2 {
           border-radius: 1rem;
           background: none;
         }
-        .gatagara img {
-          background-image: url(/img/small-hvp_gatagara_orthopedics_and_rehabilitation_hospital_logo.jpeg);
-        }
-        .giz img {
-          background-image: url(/img/small-giz.jpg);
-        }
-        .segal img {
-          background-image: url(/img/small-segal.png);
-        }
-        .global img {
-          background-image: url(/img/small-global.png);
-        }
       }
       .small-circles {
         position: absolute;
@@ -357,18 +314,6 @@ h1,p,h2 {
         img {
           border-radius: 50%;
         }
-      }
-      .gerard {
-        background-image: url(/img/small-Gerard.png);
-      }
-      .perlin {
-        background-image: url(/img/small-Perlin.png);
-      }
-      .emmanuel {
-        background-image: url(/img/small-Emmanuel.png);
-      }
-      .aggripine {
-        background-image: url(/img/small-Aggrippine.png);
       }
       q {
         font-size: 1.3rem;
@@ -416,7 +361,6 @@ footer {
   .image-container {
     width:10rem;
     height:10rem;
-    background-image: url(/img/small-logo-off.png);
   }
   ul {
     li {
@@ -458,12 +402,6 @@ footer {
           border-top-right-radius: 1rem;
         }
       }
-      .large-print-keyboard {
-        background-image: url(/img/small-print-keller.png);
-      }
-      .touchscreen-head-dauber {
-        background-image: url(/img/small-touchscreen-head-dauber.png);
-      }
     }
   }
   .famous-people-container {
@@ -482,15 +420,6 @@ footer {
           border-top-left-radius: 1rem;
           border-top-right-radius: 1rem;
         }
-      }
-      .stephen {
-        background-image: url(/img/small-stephen-hawking.png);
-      }
-      .stevie {
-        background-image: url(/img/small-stevie-wonder.png);
-      }
-      .helen {
-        background-image: url(/img/small-helen-keller.png);
       }
     }
   }
@@ -587,15 +516,6 @@ footer {
           border-radius: 1rem;
           transition: transform 500ms;
         }
-      }
-      .rene {
-        background-image:url(/img/small-Rene.png);
-      }
-      .kayitesi {
-        background-image:url(/img/small-Kayitesi.png);
-      }
-      .birekeraho {
-        background-image:url(/img/small-Birekeraho.png);
       }
     }
     img:hover {
