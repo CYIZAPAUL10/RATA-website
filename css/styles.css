@@ -1,545 +1,547 @@
-<!DOCTYPE html>
-<html lang="en">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rwanda Assistive Technology Access | RATA</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animation.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" type="image/PNG" href="img/logo-off.png">
-    <h1 class="page-header">Rwanda Assistive Technology Access home page</h1>
-    <script defer src="css/script.js"></script>
-</head>
-<body>
-    <header class="header">
-      <nav>
-        <a href="index.html" class="logo"><img src="img/logo-off.png" alt="rwanda assistive Technology Access logo"></a>
-        <ul class="nav-menu">
-            <li><a href="#home-ID" class="page_btn">Home</a></li>
-            <li><a href="#About-Us">About</a></li>
-            <li><a href="#contacts">Contact Us</a></li>
-            <li><a class="page_btn">Our Team</a></li>
-            <li><a class="page_btn">Our Courses</a></li>
-            <li><a class="page_btn">Assistive Technologies</a></li>
-            <li><a class="page_btn">Publications</a></li>
-            <li><a class="page_btn">People's Feedback</a></li>
-        </ul>
-      </nav>
-    </header>
-<main id="main-ID">
+:root{
+    --primary-color: #ffff;
+    --second-color: #0000;
+    --third-color: #0a0a2d;
+    --fourth-color: #d8d8ee;
+}
 
-  <div class="hamburger" aria-hidden="true">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </div>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    line-height: 1.9rem; 
+    /*scroll-behavior:smooth; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+body {
+ background-color: var(--fourth-color);
+}
+img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  background-color: grey;
+}
+a{
+  text-decoration: none;
+}
+.page-header{
+    display: none;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  transition: transform 500ms;
+}
+.header.nav_hidden {
+  transform: translateY(-100%);
+}
 
-  <!--Home Intro page-->
+.header nav {
+    width: 100%;
+    height:4.5rem;
+    background:  var( --primary-color);
+    padding: 1rem 1rem 1rem 3rem;
+    display: flex;
+    justify-content:space-betwee;
+    align-items: center;
+    box-shadow: #0a0a2d 1px 1px 5px 1px;
+}
+.logo{
+    height: 98%;
+    background: none !important;
+}
+.logo img{
+    width: 70px;
+    align-self:center;
+}
+.header .nav-menu{
+    list-style: none;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+}
+main {
+  >*{
+    padding: 1rem;
+  }
+}
+.blur {
+  background-color:#0a0a2d8f; 
+  * {
+    opacity: 80%;
+  }
+  p {
+    color:black; 
+  }
+  .hamburger,.bar {
+    pointer-events: none;
+  }
+}
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background: black;
+}
+.nav-menu a{
+    padding: 8px 12px; 
+    font-weight: 500;
+    transition:background 0.9s,color 0.9s; 
+    border-radius: 30px;
+    color: black;
+    cursor: pointer; 
+}
+.nav-menu a:hover{
+    background: #0a0a2d;
+    color: #d8d8ee; 
+}
+i {
+  font-size: 25px;
+  display: none !important;
+}
+/*All section titles h1*/
+.section-title {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+/*Other normal title h2*/
+.title {
+  font-weight: 500;
+  line-height: 2.5rem;
+}
+/*All the paragraphs*/
+p {
+  font-size: 1.2rem;
+  color: rgb(82, 82, 82);
+}
+/*All titles and paragraphs*/
+h1,p,h2 {
+  padding: 1rem;
+}
+/*All small circles below slides*/
+.small-circles {
+  display: flex;
+  justify-content: space-evenly;
+  .circle {
+    background-color: rgb(168, 168, 168);
+    border-radius: 50%;
+    width:.5rem !important;
+    height:.5rem !important;
+  }
+}
+/*Section Slideshow container*/
+.slideshow-container {
+  margin: 0 0 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*The section walls*/
+  .wall {
+    position: relative;
+    z-index: 1;
+    width:10rem;
+    height:25rem;
+    background-color: white;
+  }
+  /*all of the cards and the small circles (displaying at the bottom), in the div called mySlides*/
+  .mySlides {
+    position: relative;
+    width: 100%;
+    height:26rem; 
+    .card  {
+      position: absolute;
+      top:.5rem;
+      left:50% !important; 
+      transform: translateX(-50%) !important;
+      background-color: var(--primary-color);
+      box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+      transition: box-shadow 300ms,transform 300ms;
+      padding:.5rem;
+      border-radius: 1rem;
+      width:max-content;
+      height:max-content; 
+      .image-container {
+        width:35rem;
+        height:20rem;
+        img {
+          border-radius: 1rem;
+        }
+      }
+      figcaption {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          padding: 0;
+          overflow-x: hidden;
+          white-space: nowrap;
+          text-align: center;
+        }
+      }
+    }
+  .card:hover {
+    box-shadow: 0 1rem 2rem 0 rgba(0,0,0,50%);
+  } 
+  .small-circles {
+    position: absolute;
+    bottom:-2rem;
+    width: 100%;
+  }
+  }
+}
 
-  <section class="page" id="home-ID">
-    <!-- Slideshow container -->
-    <section class="slideshow-container" id="slideshowcontainer">
-      <div class="wall"></div>
-      <div class="mySlides">
-        <!-- images with number and caption text --> 
-        <figure class="card one mySlides" id="cardonemySlides">
-          <div class="image-container train2">
-            <img src="img/train2.png" alt="Our training image">
-          </div>
-          <figcaption class="image-caption">
-            <p class="card-one-sentence-one">Digital literacy for youth with disabilities.</p>
-          </figcaption>
-        </figure>
-        <figure class="card two mySlides">
-          <div class="image-container train">
-            <img src="img/train.png" alt="Our training image">
-          </div>
-          <figcaption class="image-caption">
-            <p class="card-two-sentence-one">RATA trains resource room facilitators in higher</p>
-            <p class="card-two-sentence-two" >institutions on Assistive Technology.</p>
-          </figcaption>
-        </figure>
-        <figure class="card  three mySlides">
-          <div class="image-container teachers">
-            <img src="img/teachers.png" alt="Our teachers image">
-          </div>
-          <figcaption class="image-caption">
-            <p class="card-three-sentence-one">Training for teachers in special schools</p>
-            <p class="card-three-sentence-two">on Assistive Technology.</p>
-          </figcaption>
-        </figure>
-        <figure class="card  four mySlides">
-          <div class="image-container meet">
-            <img src="img/meet.png" alt="One of our meeting image">
-          </div>
-          <figcaption class="image-caption">
-            <p class="card-four-sentence-one">RATA often contributes to initiatives that advance</p>
-            <p class="card-four-sentence-two">Assistive Technology in Rwanda.</p>
-          </figcaption>
-        </figure>
-        <figure class="card  five mySlides">
-          <div class="image-container appreciate">
-            <img src="img/appreciate.png" alt="An appreciating image">
-          </div>
-          <figcaption class="image-caption">
-            <p class="card-five-sentence-one">Participants in our trainings are awarded and</p>
-            <p class="card-five-sentence-two">introduced to potential employers.</p>
-          </figcaption>
-        </figure>
-        <div class="small-circles">
-          <div class="circle one intro"></div>
-          <div class="circle two intro"></div>
-          <div class="circle three intro"></div>
-          <div class="circle four intro"></div>
-          <div class="circle five intro"></div>
-        </div>
-      </div>
-      <div class="wall"></div>
-    </section>  
-    <section class="what-we-do">
-      <h1 class="section-title">What We Do</h1>
-      <p>
-      Our projects are designed to widen participation, increase educational and employment opportunities for people with disabilities 
-      through the use of Assistive Technology. 
-      Alongside with community workers in different areas of Rwanda, 
-      RATA intervenes in 4 areas which are: 
-      “Raising Awareness and Advocacy on the use and importance of Assistive technology, 
-      Capacity development, Inclusive education and Innovation.”
-      </p>
-      <div class="cards">
-        <div class="card one">
-          <div class="image-container community">
-            <img src="img/Community.png" alt="Community Outreach">
-          </div>
-          <h2 class="title">Community Outreach and Public Awareness</h2>
-          <p>
-            RATA intervenes in this area as many people in Rwanda are not yet aware enough 
-            of the importance of Assistive Technology in the lives of persons with disabilities.
-          <span class="read_more_span none">
-            It’s done through meetings, workshops, awareness campaigns and consultations among private and public institutions, schools and 
-            the general community. 
-            RATA also plans to use innovative and various channels to pass appropriate messages during awareness and advocacy campaigns. 
-            In February 2024, Accessible free online courses on Assistive Technology were introduced on our website, to primarily make 
-            sure many people in Rwanda are aware enough of the importance of Assistive Technology in the lives of persons with disabilities.
-          </span>
-          </p>
-          <a class="read_more_anchor">Read more</a>
-        </div>
-        <div class="card two">
-          <div class="image-container train2">
-            <img src="img/train2.png" alt="Training">
-          </div>
-          <h2 class="title">Capacity Development and Facilitating Access to Assistive Technologies</h2>
-          <p>
-            Public and private institutions, schools, persons with disabilities, 
-            their caretakers and parents should be equipped with skills and knowledge on Assistive Technology
-          <span class="read_more_span none">
-            in order to widen participation, increase educational and employment opportunities for persons with disabilities. 
-            The high cost of Assistive Technologies and their availability is another challenge that RATA tackles on.
-          </span>
-          </p>
-          <a class="read_more_anchor">Read more</a>
-        </div>
-        <div class="card three">
-          <div class="image-container trainers-one">
-            <img src="img/Trainers one.png" alt="Training">
-          </div>
-          <h2 class="title">Training of Trainers (TOT) in Education</h2>
-          <p>
-            To enhance Inclusive education, Assistive Technology plays a great role as it provides special 
-            educational needs software, switches, computer access communication aids for learners with disabilities.
-            <span class="read_more_span none">
-              Teachers and other professionals involved in supporting children 
-              with disabilities should be equipped with appropriate knowledge and skills on Assistive Technology in order to ensure that the classroom is inclusive. 
-              Under the project called: “Accessible digital content for persons with disabilities”,
-              RATA is training teachers in inclusive and special schools on how to prepare accessible digital content for their students.
-            </span>
-          </p>
-          <a class="read_more_anchor">Read more</a>
-        </div>
-        <div class="card four">
-          <div class="image-container trainers-two">
-            <img src="img/Trainers two.png" alt="Training">
-          </div>
-          <h2 class="title">Digital Accessibility and Innovation</h2>
-          <p>
-            This is the area where we believe Assistive Technology can make a great impact in improving the lives of 
-            persons with disabilities. Local Assistive Technology tools need to be created.      
-          </p>
-        </div>
-        <div class="card five">
-          <div class="image-container computer screen">
-            <img src="img/Computer Screen.png" alt="Training">
-          </div>
-          <h2 class="title">Inclusive Tech Lab</h2>
-          <p>
-            Under our Inclusive Tech Lab, we have an inclusive educational platform for technology 
-            designed for persons with disabilities and a resource centre for Assistive Technology.
-            <span class="read_more_span none">
-              The lab also serves as a platform where persons 
-              with disabilities grow in tech while learning, collaborating, 
-              connecting and innovating their local and affordable Assistive Technologies that meet their needs.
-            </span>
-          </p>
-          <a class="read_more_anchor">Read more</a> 
-        </div>
-      </div>
-    </section>
-    <section class="about-us" id="About-Us">
-      <article>
-        <h1 class="section-title">About Us</h1>
-        <p>
-          Rwanda Assistive Technology Access (RATA) is a local non-governmental organization operating in Rwanda under the law No 552/RGB/NGO/LP/10/2019 founded on 4th January 2018 to foster Assistive technology in Rwanda after realizing that there’s a gap for Persons with disabilities in Rwanda, in accessing Assistive Technology.
-        </p>
-        <p>
-          RATA was respectively recommended and recognized by Rwanda Education Board (REB) on 5th May 2018 and by the National Council of Persons with Disabilities (NCPD) on 6th June 2018. Its headquarters is located at Remera-Gasabo, 9 KG 626 St.
-        </p>
-      </article>
-      <article>
-      <h2 class="title">Vision</h2>
-      <p>
-        RATA contributes to a society where persons with disabilities are able to study in order to live independently through the use of Assistive Technology.
-      </p>
-      </article>
-      <article>
-        <h2 class="title">Mission</h2>
-        <p>
-          The Mission of the Organization is to ensure accessible Assistive technologies for people with disabilities mainly in education and expanding access to these technologies.
-        </p>
-    </article>
-    <article>
-      <h2 class="title">Core Values</h2>
-      <div class="values">
-        <p>Dignity</p>
-        <p>Passion</p>
-        <p>Humility</p>
-        <p>Integrity</p>
-        <p>Compassion</p>
-      </div>
-    </article>
-    </section>
-    <section class="our-parteners">
-      <h1 class="section-title">Our Parteners</h1>
-      <div class="partener-slide">
-        <div class="wall"></div> 
-        <div class="slide-our-parteners">
-          <figure class="gatagara image-container">
-            <img src="img/hvp_gatagara_orthopedics_and_rehabilitation_hospital_logo.jpeg" alt="HVP Gatagara logo">
-            <figcaption>
-              <h2>HVP Gatagara</h2>
-            </figcaption>
-          </figure>
-          <figure class="giz image-container">
-            <img src="img/giz.jpg" alt="Giz logo">
-            <figcaption>
-              <h2 style="font-size: 1.2rem;">German Corporation for International Cooperation</h2>
-            </figcaption>
-          </figure>
-          <figure class="segal image-container">
-            <img src="img/segal.png" alt="Segal Family Foundation logo">
-            <figcaption>
-              <h2>Segal Family Foundation</h2>
-            </figcaption>
-          </figure>
-          <figure class="global image-container">
-            <img src="img/global.png" alt="Global logo">
-            <figcaption>
-              <h2>Global Limited</h2>
-            </figcaption>
-          </figure>
-          <div class="small-circles">
-            <div class="circle one parteners"></div>
-            <div class="circle two parteners"></div>
-            <div class="circle three parteners"></div>
-            <div class="circle four parteners"></div>
-          </div>
-        </div>
-        <div class="wall"></div>
-      </div>
-    </section>
-    <section class="feedback">
-      <h1 class="section-title">What People Say About <span class="blue-span">RATA</span></h1>
-      <div class="comments">
-        <article>
-          <div class="a-person gerard">
-            <img src="img/Gerard.png" alt="Commentor">
-          </div>
-          <q>
-            <em>
-                As a resource room facilitator at University of Rwanda-Nyagatare Campus,I often faced challenges while facilitating students with
-                disabilities like how to make accessible documents, using braille displays, victor readers, braille embossers,...But after attending
-                RATA training on Assistive Technology, I am now able to overcome such challenges.
-            </em>
-          </q>
-          <p>- Gerard Maniraguha</p>
-          <a href="feedback.html">Read more</a>
-        </article>
-      </div>
-    </section>
-  </section>
+/*What We Do Section in the home page*/
+.what-we-do {
+  display: flex;
+  flex-direction: column;
+    a {
+      color:rgb(255, 0, 43);
+      flex-grow: 1;
+      display: grid;
+      align-items: flex-end;
+      cursor: pointer;
+    }
+    a:active {
+      color: rgb(183, 23, 49);
+      text-decoration: underline;
+    }
+    /*Card container*/
+    .cards  { 
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(23rem,1fr));
+      gap:2rem;
+      /*Each single card*/
+      .card {
+        justify-self: center;
+        background-color: var(--primary-color);
+        border-radius:1rem;
+        box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        .image-container {
+          width: 100%;
+          height: 15rem;
+          img {
+            border-radius:1rem 1rem 0 0;
+          }
+        }
+      }
+    }
+    p {
+      /*border: 2px solid; */
+    }
+}
 
-    <!--our team Section-->
+.about-us {
+  padding:.5rem;
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  .title {
+    font-size: 2rem;
+  }
+  article:last-of-type {
+    display: flex;
+    flex-direction: column;
+    gap:2.5rem;
+    /*Values*/
+    .values {
+     display: grid;
+     grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+     gap:2rem;
+      p {
+        justify-self: center;
+        background-color: var(--primary-color);
+        box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+        width:15rem;
+        transition: transform 500ms;
+      }
+    }
+  }
+}
+/*Our parteners*/
+.our-parteners {
+  background-color: white;
+  margin: 4rem 0 0 0;
+  padding: 0 0 2rem 0;
+    .partener-slide {
+    display: flex;
+    justify-content: space-between;
+    .wall {
+      position: relative;
+      z-index: 1;
+      width:7rem;
+      height:25rem; 
+      background-color: white;
+    }
+    .slide-our-parteners {
+      position: relative;
+      height:25rem;
+      background-color: black;
+      color: white;
+      border-radius: 1rem;
+      flex-grow: 1;
+      padding: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap:2rem;
+      .image-container {
+        position: absolute;
+        top:1.5rem;
+        left:50%;
+        transform: translateX(-50%);
+        width:20rem;
+        height:15rem;
+        img {
+          border-radius: 1rem;
+          background: none;
+        }
+      }
+      .small-circles {
+        position: absolute;
+        bottom: 1.5rem;
+        width:30%;
+      }
+    }
+  }
+}
+/*feedback section (Home Page and Feedback Page)*/
+.feedback {
+  padding:0 0 1.5rem 0;
+  background-color: rgb(1, 15, 37);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap:3rem;
+  .comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:3rem;
+    article {
+      background-color: #42424e;
+      padding:2rem 1rem;
+      border-radius: 1rem;
+      box-shadow: 1rem .7rem 1rem #32323b;
+      display: flex;
+      flex-direction: column;
+      gap:2rem;
+      width:70%;
+      .a-person {
+        width:10rem;
+        height:10rem;
+        border-radius: 50%;
+        img {
+          border-radius: 50%;
+        }
+      }
+      q {
+        font-size: 1.3rem;
+      }
+      p {
+        text-align: left;
+        padding: 0;
+        color:white;
+      }
+      a {
+        color:rgb(255, 0, 43);
+        flex-grow: 1;
+        display: grid;
+        align-items: flex-end;
+      }
+      a:hover {
+        color: rgb(183, 23, 49);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.blue-span {
+  color: rgb(92, 92, 255);
+}
 
-  <section class="page none" id="our-team">
-    <h1 class="section-title">Our brilliant team of <span class="blue-span">RATA</span></h1>
-    <p>These people work on making our product best.</p>
-    <div class="team-members">
-        <figure>
-            <div class="rene">
-                <img src="img/Rene.png" alt="Executive Director image">
-            </div>
-            <figcaption>
-                Executive Director
-            </figcaption>
-        </figure>
-        <figure>
-            <div class="kayitesi">
-                <img src="img/Kayitesi.png" alt="Finance Officer image">
-            </div>
-            <figcaption>
-                Finance and Administration Officer
-            </figcaption>
-        </figure>
-        <figure>
-            <div class="birekeraho">
-                <img src="img/Birekeraho.png" alt="Assistive Technology Trainer image">
-            </div>
-            <figcaption>
-                Assistive Technology Mentor and Trainer
-            </figcaption>
-        </figure>
-    </div>
-  </section>
-
-    <!--our courses Section-->
-
-  <section class="page none" id="our-courses">
-    <div class="page-intro">
-        <h1 class="section-title" style="padding:2rem 0 0 0">RATA Courses</h1>
-        <p>
-            Our courses are designed to empower persons with disabilities and those who support them by providing knowledge and skills 
-            in Assistive Technology. By completing our courses, you’ll be better equipped to help individuals achieve greater 
-            independence and improve their quality of life.
-        </p>
-     </div>
-    <div class="all-courses">
-      <article class="single-course">
-          <h2 class="title">Basic Assistive Technology Training</h2>
-          <p>
-              Learn about basic at training to help persons with disabilities integrate and succeed in various aspects of life.
-          </p>
-          <a>View Course</a>
-      </article>
-      <article class="single-course">
-          <h2 class="title"> Advanced Assistive Technology Tools</h2>
-          <p>
-              Learn about advanced Assistive Technology tools to help persons with disabilities integrate and succeed in various aspects of life.
-          </p>
-          <a>View Course</a>
-      </article>
-      <article class="single-course">
-          <h2 class="title">Inclusive Education Strategies</h2>
-          <p>
-              Learn about inclusive education strategies to help persons with disabilities integrate and succeed in various aspects of life.
-          </p>
-          <a>View Course</a>
-      </article>
-    </div>
-    <div class="courses-roadmap">
-      <article>
-          <h2 class="title">How to Take a Course</h2>
-          <p>Taking a course with RATA is straightforward and accessible. Follow these steps:</p>
-          <ol>
-              <li>Navigate to the course you are interested in from the list above.</li>
-              <li>Click on "View Course" and you will move to login page.</li>
-              <li>If you don't have account on rata academy click on "Sign Up" to create it.</li>
-              <li>Complete the modules at your own pace. </li>
-              <li>Each module includes video(not yet) lectures(not yet), reading materials, and quizzes (not yet).</li>
-          </ol>
-      </article>
-      <article>
-          <h2 class="title">Certification Process</h2>
-          <p>Upon successful completion of a course, you will be eligible for a certification. Here's how you can obtain it:</p>
-          <ol>
-              <li>Complete all course modules and pass the final assessment.</li>
-              <li>Submit any required assignments .</li>
-              <li>Certificate will be issued upon successful completion if you passed with above 75%.</li>
-              <li>Your certificate will be available for download in PDF format under certificates under sidebar.</li>
-              <li>Display your certificate on your LinkedIn profile or share it with your employer.</li>
-          </ol>
-      </article>
-    </div>
-  </section>
-
-  <!--assistive technologies section-->
-  
-  <section class="page none assistivetechnologies-section" id="assistive-technologies"> 
-    <h1 class="section-title" style="padding:2rem 0 0 0">Assistive Technology</h1>
-    <p>
-        Assistive Technology (AT) is technology that is used by persons with disabilities to promote greater independence by enabling them to perform tasks that might otherwise be difficult or impossible.
-        It can include mobility devices such as walkers and wheelchairs, as well as hardware, software, and peripherals that assist people with disabilities in accessing computers or other information technologies.
-    </p>
-    <h2 class="title">Examples of Assistive Devices</h2>
-    <div class="assistive-techonologies-container">
-        <figure class="keyboard-container">
-            <div class="image-container large-print-keyboard">
-                <img src="img/pront-keyboard_upscayl_2x_realesrgan-x4plus.png" alt="Large Keyboard printer">
-            </div>
-            <figcaption>
-                <h2 class="title">Large-Print Keyboard</h2>
-                <p>
-                    This large-print keyboard has tactile elements and special keys for persons with visual impairment.
-                </p>
-            </figcaption>
-        </figure>   
-        <figure class="touchscreen-head-dauber-container">
-            <div class="image-container touchscreen-head-dauber">
-                <img src="img/touchscreen-head-dauber.png" alt="Large Keyboard printer">
-            </div>
-            <figcaption>
-                <h2 class="title">Touchscreen with a Head Dauber</h2>
-                <p>
-                    This voter with a manual dexterity disability is making choices on a touchscreen with a head dauber.
-                </p>
-            </figcaption>
-        </figure>
-    </div>
-    <h1 class="section-title" style="padding:3rem 0;">Famous People Who Benefited from Assistive Technology</h1>
-    <div class="famous-people-container">
-        <figure>
-            <div class="image-container stephen">
-                <img src="img/stephen-hawking_upscayl_2x_realesrgan-x4plus.webp" alt="Stephen Hawking">
-            </div>
-            <figcaption>
-                <h2 class="title">Stephen Hawking</h2>
-                <p>
-                   Stephen Hawking is one of the most well-known physicists in the world, and he was able to achieve that in 
-                   spite of being diagnosed with ALS when he was 21. He can now only speak with the assistance of a computer 
-                   and has been a full-time powerchair user since the 1980s. His best-selling work, A Brief History of Time, 
-                   stayed on the Sunday Times bestsellers list for an astounding 237 weeks.
-                </p>
-            </figcaption>
-        </figure>
-        <figure>
-            <div class="image-container stevie">
-                <img src="img/stevie-wonder_upscayl_2x_realesrgan-x4plus.webp" alt="Stevie Wonder">
-            </div>
-            <figcaption>
-                <h2 class="title">Stevie Wonder</h2>
-                <p>
-                   One of the most beloved singers alive today, Stevie Wonder is a musician, singer, and songwriter who was born blind.
-                   He was born six weeks early, and his blindness was caused by a condition where the blood vessels at the back of his eyes 
-                   had not yet reached the front. Despite this, Stevie has recorded more than 30 U.S. top ten hits and has had a wildly successful 
-                   music career.
-                </p>
-            </figcaption>
-        </figure>
-        <figure>
-            <div class="image-container helen">
-                <img src="img/helen-keller_upscayl_3x_realesrgan-x4plus.webp" alt="Helen Keller">
-            </div>
-            <figcaption>
-                <h2 class="title">Helen Keller</h2>
-                <p>
-                    Helen Keller was the first deaf and blind person to earn a college degree. Her story was famously portrayed in the play 
-                    and film, The Miracle Worker. Despite her disabilities, she wrote 12 published books and was a member of the Socialist Party 
-                    in America, campaigning heavily for women's rights and other labor rights.
-                </p>
-            </figcaption>
-        </figure>
-    </div>
-  </section>
-
-  <!--Publications section -->
-
-  <section class="page none" id="publications">
-    <h1 class="section-title">Publications</h1>
-    <p>
-        Report on assistive technology training for visually impaired students.
-    </p>
-    <a href="https://drive.google.com/file/d/1g42kJx7zXk5RK2TECx-UVtuv2slFFXgD/view?usp=sharing">
-        Read Report
-    </a>
-  </section>
-
-  <!--People_feedabck-->
-
-  <section class="page none feedback" id="people_feedback">
-    <h1 class="section-title">What People Say About <span class="blue-span">RATA</span></h1>
-    <div class="comments">
-      <article>
-          <div class="a-person gerard">
-          <img src="img/Gerard.png" alt="Commentor">
-          </div>
-          <q>
-          <em>
-              As a resource room facilitator at University of Rwanda-Nyagatare Campus,I often faced challenges while facilitating students with
-              disabilities like how to make accessible documents, using braille displays, victor readers, braille embossers,...But after attending
-              RATA training on Assistive Technology, I am now able to overcome such challenges.
-          </em>
-          </q>
-          <p>- Gerard Maniraguha</p>
-      </article>
-      <article>
-          <div class="a-person perlin">
-          <img src="img/Perlin.png" alt="Commentor">
-          </div>
-          <q>
-          <em>
-              In 2019, I was fortunate to participate in a training on Assistive Technology conducted by RATA which inspired me to establish an
-              Assistive Technology club at the University of Rwanda-HUYE Campus this year.I think this club will help students with disabilities
-              at our campus who need such technologies.
-          </em>
-          </q>
-          <p>- Perlin Mujyambere</p>
-      </article>
-      <article>
-          <div class="a-person emmanuel">
-          <img src="img/Emmanuel.png" alt="Commentor">
-          </div>
-          <q>
-          <em>
-              I am very grateful for the skills I gained during RATA training. As a language teacher I learnt how to make comprehension texts more
-              accessible for my students by turning them into audio recordings. Additionally, I also developed skills on how to confidently create
-              school materials and resources that sudents with visual impairments will find easy to use.
-          </em>
-          </q>
-          <p>- Emmanuel Ndayisenga, Teacher at HVP Gatagara School</p>
-      </article>
-      <article>
-          <div class="a-person aggripine">
-            <img src="img/Aggrippine.png" alt="Commentor">
-          </div>
-          <q>
-            <em>
-                I am a Geography and History teacher at HVP GATAGARA-Rwamagana. We had particular difficulties while teaching using maps and images.
-                In this training, I have acquired the skills that help to deal with that. I am now confident that I can teach students without challenges.
-                Also,notes used to be printed poorly without title, but due to the skills that I now possess, World documents will be published well
-                and quickly converted Braille.
-            </em>
-          </q>
-          <p>- Aggripine Mutegwaraba</p>
-      </article>
-    </div>
-  </section>
-  <footer id="contacts" >
-    <div class="image-container">
-      <img src="img/logo-off.png" alt="RATA logo">
-    </div>
-    <address>
-      <strong>RATA</strong><br>
-      9 KG 626 St, Kigali<br>
-      Kigali, Remera, Rwanda<bt>
-    </address>
-      <ul>
-        <li><a href="mailto:info@rata.rw">info@rata.rw</a></li>
-        <li><a href=""><span class="fab fa-twitter"></span> Twitter</a></li>
-        <li><a href=""><span class="fab fa-linkedin"></span> LinkedIn</a></li>
-        <li><a href=""><span class="fab fa-instagram"></span> Instagram</a></li>
-      </ul>
-  </footer>
-</main>
-</body>
-</html>
+footer {
+  margin: 2rem 0 0 0;
+  padding:2rem 0;
+  background-color: rgb(1, 15, 37);
+  color:white;
+  display: flex;
+  justify-content: space-evenly;
+  .image-container {
+    width:10rem;
+    height:10rem;
+  }
+  ul {
+    li {
+      list-style: none;
+      a {
+        color:white;
+        i {
+          background-color: #0a0a2d;
+        }
+      }
+      a:hover {
+        color: rgb(92, 92, 255);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+/*Assistive Technologies Page*/
+.assistivetechnologies-section {
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  .assistive-techonologies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(22rem,1fr));
+    gap:1rem;
+    /*figure is both keyboard and touch screen head dauber card*/
+    figure {
+      background-color: var(--primary-color);
+      border-radius:1rem;
+      box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+      div {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        img {
+          border-top-left-radius: 1rem;
+          border-top-right-radius: 1rem;
+        }
+      }
+    }
+  }
+  .famous-people-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap:1rem;
+    figure {
+      background-color: var(--primary-color);
+      border-radius:1rem;
+      box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+      div {
+        height: 25rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        img {
+          border-top-left-radius: 1rem;
+          border-top-right-radius: 1rem;
+        }
+      }
+    }
+  }
+}
+/*RATA Courses page*/
+#our-courses {
+  display: flex;
+  flex-direction: column;
+  .all-courses {
+    margin: 2rem 0 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 1rem;
+    .single-course {
+      background-color: var(--primary-color);
+      border-radius:1rem;
+      box-shadow: 0 .5rem 1rem 0 rgba(0,0,0,0.2);
+    }
+  }
+  .courses-roadmap {
+    margin: 0 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    article {
+      display: flex;
+      flex-direction: column;
+      gap:1rem;
+      ol {
+        list-style-position: inside;
+      }
+      li {
+        text-align: start;
+        font-size: 1.15rem;
+        color: #42424e;
+        line-height: 2.5rem;
+      }
+      h1,p {
+        text-align: start;
+        padding: 0;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+  }
+  }
+}
+/*Publish page*/
+.publish-page {
+  .publish-report {
+    display: flex;
+    flex-direction: column;
+    gap:2.5rem;
+    h1,p,a {
+      text-align: start;
+      padding: 0;
+    }
+    a {
+      color:rgb(255, 0, 43);
+    }
+    a:hover {
+      color: rgb(183, 23, 49);
+      text-decoration: underline;
+    }
+  }
+}
+/*Our Team page*/
+#our-team {
+  background-color: rgb(1, 15, 37);
+  color: white;
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(19rem,1fr));
+    gap:2rem;
+    figure {
+      justify-self: center;
+      width:20rem;
+      background-color: #42424e;
+      padding:1rem;
+      border-radius: 1rem;
+      box-shadow: 1rem .7rem 1rem #32323b;
+      display: flex;
+      flex-direction: column;
+      gap:.5rem;
+      div {
+        height:25rem;
+        overflow: hidden;
+        img {
+          border-radius: 1rem;
+          transition: transform 500ms;
+        }
+      }
+    }
+    img:hover {
+      transform: scale(1.4);
+    }
+  }
+  p {
+    color:white;
+  }
+}
+.none {
+  display: none !important;
+}
