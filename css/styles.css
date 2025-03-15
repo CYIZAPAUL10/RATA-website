@@ -529,3 +529,6 @@ footer {
     color:white;
   }
 }
+.none {
+  display: none !important;
+}
