@@ -1,11 +1,10 @@
 const read_more_anchor_node_list = document.querySelectorAll('.read_more_anchor');
 const header = document.querySelector('header');
 const pages = document.querySelectorAll('.page');
-const main = document.querySelector('main');
+const main = document.querySelector('main'); 
 
-const all_page_navigations = header.querySelectorAll('li'); //all anchor elements
+const only_home_nav = header.querySelectorAll('.only_home_nav'); //'About Us' && 'Contact Us' for home navigations
 const buttons_page_navigations = header.querySelectorAll('.page_btn'); //only anchor elements that help the page to be dynamic
-const buttons_page_navigations_array = Array.from(buttons_page_navigations); 
 
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -15,16 +14,11 @@ is_nav_menu_active = false;
 //card read more anchor
 read_more_anchor_node_list.forEach(anchor => {
     anchor.addEventListener('click', e => {
-        if (e.target.previousElementSibling.children[0].matches('.none')) {
-            e.target.previousElementSibling.children[0].classList.remove('none')
-        }
-        else {
-            e.target.previousElementSibling.children[0].classList.add('none')
-        } 
+        e.target.previousElementSibling.children[0].classList.toggle('none')
     })
 })
 
-//page scrolling for asticky position
+//page scrolling for sticky position
 let scroll = scrollY;
 document.addEventListener('scroll', () => {
     if (scroll < scrollY) {
@@ -49,9 +43,9 @@ const documentDesactive = () => {
 }
 
 const trying = (e) => {
-        navMenu.classList.add('visible');
-        main.classList.add('blur');
-        document.addEventListener('mousedown',documentActive);
+    navMenu.classList.add('visible');
+    main.classList.add('blur');
+    document.addEventListener('mousedown',documentActive);
 }
 
 hamburger.addEventListener('click',trying);
@@ -62,19 +56,21 @@ document.addEventListener('mouseup',documentDesactive);
 const page_view = index => {
     for (i = 0; i<pages.length; i++) {
         if (i === index) {
-            pages[i].classList.remove('none');
+            pages[i].style.display = 'block';
         }
         else {
-            pages[i].classList.add('none');
+            pages[i].style.display = 'none';
         }
     }
+    //if index === 0, means u're on the home page so the 'About' && 'Contact Us' will display, otherwise 'About' && 'Contact Us' won't display
+    //'About' is only_home_nav[0] && 'Contact Us' is only_home_nav[1]
     if (index !== 0) {
-        all_page_navigations[1].classList.add('none');
-        all_page_navigations[2].classList.add('none');
+        only_home_nav[0].style.display = 'none';
+        only_home_nav[1].style.display = 'none';
     }
     else {
-        all_page_navigations[1].classList.remove('none');
-        all_page_navigations[2].classList.remove('none');
+        only_home_nav[0].style.display = 'block';
+        only_home_nav[1].style.display = 'block';
     }
 
 }
@@ -82,7 +78,10 @@ const page_view = index => {
 //to navigate the web pages
 buttons_page_navigations.forEach ((anchor) => {
     anchor.addEventListener('pointerdown', e => {
-        const index = buttons_page_navigations_array.indexOf(e.target);
-        page_view(index);
+        //the e.target corresponds to the 'Home','Our Team','Our Courses'... these are those elements which changes the website state (dynamically)
+        //so their id's corresponds to the page's index (substracted by 1) ex Home li item's id === 1 && the Home Page is index 0 in pages array
+        page_view(parseInt(e.target.id)-1);
     })
 })
+
+page_view(0);
