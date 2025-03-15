@@ -4,7 +4,6 @@
     --third-color: #0a0a2d;
     --fourth-color: #d8d8ee;
 }
-
 *{
     margin: 0;
     padding: 0;
@@ -92,15 +91,16 @@ main {
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  background: black;
+  background: black; 
 }
 .nav-menu a{
     padding: 8px 12px; 
     font-weight: 500;
-    transition:background 0.9s,color 0.9s; 
+    transition:background 0.3s,color 0.3s; 
     border-radius: 30px;
     color: black;
     cursor: pointer; 
+    width: max-content;
 }
 .nav-menu a:hover{
     background: #0a0a2d;
@@ -239,9 +239,6 @@ h1,p,h2 {
         }
       }
     }
-    p {
-      /*border: 2px solid; */
-    }
 }
 
 .about-us {
@@ -356,16 +353,6 @@ h1,p,h2 {
         text-align: left;
         padding: 0;
         color:white;
-      }
-      a {
-        color:rgb(255, 0, 43);
-        flex-grow: 1;
-        display: grid;
-        align-items: flex-end;
-      }
-      a:hover {
-        color: rgb(183, 23, 49);
-        text-decoration: underline;
       }
     }
   }
@@ -541,7 +528,4 @@ footer {
   p {
     color:white;
   }
-}
-.none {
-  display: none !important;
 }
