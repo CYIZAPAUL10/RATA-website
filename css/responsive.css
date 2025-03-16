@@ -38,14 +38,11 @@
         display: block !important;
         width: max-content;
         position: absolute;
-        top:0;
-        right: 0;
+        top:50%;
+        right: .3rem;
         z-index: 10;
-        transform: translateY(0) translateX(0);
+        transform: translateY(-50%) translateX(0);
         transition: transform 500ms;
-    }
-    .hamburger.upwards {
-        transform: translateY(-100%) translateX(0);
     }
     .nav-menu {
         position: absolute;
