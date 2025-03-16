@@ -14,20 +14,19 @@ is_nav_menu_active = false;
 //card read more anchor
 read_more_anchor_node_list.forEach(anchor => {
     anchor.addEventListener('click', e => {
+        console.log('in')
         e.target.previousElementSibling.children[0].classList.toggle('none')
     })
-})
+}) 
 
 //page scrolling for sticky position
 let scroll = scrollY;
 document.addEventListener('scroll', () => {
     if (scroll < scrollY) {
        document.querySelector('.header').classList.add('nav_hidden');
-       hamburger.classList.add('upwards');
     }
     else {
         document.querySelector('.header').classList.remove('nav_hidden');
-        hamburger.classList.remove('upwards');
     }
     scroll = scrollY;
 })
