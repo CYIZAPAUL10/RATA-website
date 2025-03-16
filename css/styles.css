@@ -207,14 +207,14 @@ h1,p,h2 {
   flex-direction: column;
     a {
       color:rgb(255, 0, 43);
-      flex-grow: 1;
-      display: grid;
-      align-items: flex-end;
+      display: block;
+      text-decoration: underline;
+    }
+    a:hover {
       cursor: pointer;
     }
     a:active {
       color: rgb(183, 23, 49);
-      text-decoration: underline;
     }
     /*Card container*/
     .cards  { 
@@ -529,6 +529,7 @@ footer {
     color:white;
   }
 }
+
 .none {
   display: none !important;
 }
